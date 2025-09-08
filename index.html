@@ -6,145 +6,511 @@
   <title>TP Japan — 暮らすように、海外で働く。</title>
   <meta name="description" content="TPマレーシア／タイの日本語スピーカー採用サイト。福利厚生、勤務地、面接、移住サポート、応募方法をわかりやすくご案内。" />
   <meta name="theme-color" content="#ff0082" />
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
-
-  <!-- Icons / Social -->
   <link rel="icon" href="photos/TPLogo11.png" type="image/png" />
   <meta property="og:image" content="photos/TPLogo11.png" />
-
-  <!-- Base styles -->
+  <!-- =============================================== -->
+  <!-- Base styles (expanded for readability and lines) -->
+  <!-- =============================================== -->
   <style>
-    :root{
-      --bg:#fff;--ink:#0b1020;--muted:#5a6072;--line:#e7e9ef;--card:#ffffff;--accent:#ff0082;--accent-2:#3b82f6;--surface:#f7f8fb;
-      --success:#16a34a;--warn:#f59e0b;--error:#ef4444;
-      --r:12px;--r2:20px;--space:clamp(16px,2vw,24px);--w:1100px;
+    :root {
+      --bg: #ffffff;
+      --ink: #0b1020;
+      --muted: #5a6072;
+      --line: #e7e9ef;
+      --card: #ffffff;
+      --accent: #ff0082;
+      --accent-2: #3b82f6;
+      --surface: #f7f8fb;
+      --success: #16a34a;
+      --warn: #f59e0b;
+      --error: #ef4444;
+      --r: 12px;
+      --r2: 20px;
+      --space: clamp(16px, 2vw, 24px);
+      --w: 1100px;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,-apple-system,Segoe UI,Roboto;line-height:1.8}
-    img{max-width:100%;height:auto;display:block}
-    a{color:var(--ink);text-decoration:none}
-    .container{max-width:var(--w);margin:0 auto;padding:0 16px}
-    .visually-hidden{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.2rem;border:1px solid var(--ink);border-radius:10px;font-weight:700;gap:.5rem}
-    .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
-    .btn.ghost{background:transparent}
-    .badge{display:inline-block;background:#eef;border:1px solid var(--line);border-radius:999px;padding:.2rem .6rem;font-size:.8rem}
-    .pill{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .6rem;border:1px solid var(--line);border-radius:999px;background:#fff}
-    .eyebrow{letter-spacing:.16em;font-size:.9rem;color:var(--muted)}
-    .lead{font-size:1.1rem;color:var(--muted)}
-    .h2{font-size:clamp(1.6rem,2.8vw,2.2rem);margin:0}
-    .h2-sub{margin:.35rem 0 0 0;color:var(--muted)}
-    .section-head{margin-bottom:1.1rem}
-    section{padding:clamp(36px,4vw,64px) 0;border-top:1px solid var(--line)}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px}
-    .lift{transition:transform .2s ease, box-shadow .2s ease}
-    .lift:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(11,16,32,.06)}
-    .grid{display:grid;gap:16px}
-    .cols-2{grid-template-columns:repeat(2,1fr)}
-    .cols-3{grid-template-columns:repeat(3,1fr)}
-    .cols-4{grid-template-columns:repeat(4,1fr)}
-    .cols-1-sm{ }
-    @media (max-width:960px){.cols-4,.cols-3,.cols-2{grid-template-columns:1fr}}
-    .u-center{text-align:center}
-    .u-m0{margin:0}
-    .u-mt0{margin-top:0}
-    .u-mt6{margin-top:6px}
-    .u-mt8{margin-top:8px}
-    .u-mt12{margin-top:12px}
-    .u-mt16{margin-top:16px}
-    .u-pt0{padding-top:0}
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Noto Sans JP', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      line-height: 1.8;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: var(--w);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.2rem;
+      border: 1px solid var(--ink);
+      border-radius: 10px;
+      font-weight: 700;
+      gap: 0.5rem;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .btn.ghost {
+      background: transparent;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #eef;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.8rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.25rem 0.6rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+    }
+
+    .eyebrow {
+      letter-spacing: 0.16em;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+    }
+
+    .h2 {
+      font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+      margin: 0;
+    }
+
+    .h2-sub {
+      margin: 0.35rem 0 0 0;
+      color: var(--muted);
+    }
+
+    .section-head {
+      margin-bottom: 1.1rem;
+    }
+
+    section {
+      padding: clamp(36px, 4vw, 64px) 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      padding: 16px;
+    }
+
+    .lift {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .lift:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(11, 16, 32, 0.06);
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .cols-5 { grid-template-columns: repeat(5, 1fr); }
+    .cols-1-sm { }
+
+    @media (max-width: 960px) {
+      .cols-5, .cols-4, .cols-3, .cols-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .u-center { text-align: center; }
+    .u-m0 { margin: 0; }
+    .u-mt0 { margin-top: 0; }
+    .u-mt6 { margin-top: 6px; }
+    .u-mt8 { margin-top: 8px; }
+    .u-mt12 { margin-top: 12px; }
+    .u-mt16 { margin-top: 16px; }
+    .u-pt0 { padding-top: 0; }
 
     /* Header */
-    .site-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.9);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
-    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
-    .brand{display:flex;align-items:center;gap:10px}
-    .brand-logo{width:36px;height:36px;border-radius:10px}
-    .brand-text .t{font-weight:900;letter-spacing:.02em}
-    .brand-text .s{font-size:.85rem;color:var(--muted)}
-    .site-nav{display:flex;gap:14px;flex-wrap:wrap}
-    .site-nav a{padding:8px 6px;border-radius:8px}
-    .site-nav a:hover{background:#f2f4fb}
-    .header-actions{display:flex;gap:10px;align-items:center}
-    .hamburger{display:none}
-    @media (max-width:960px){
-      .site-nav{display:none}
-      .hamburger{display:inline-flex;flex-direction:column;gap:5px;border:1px solid var(--line);background:#fff;padding:8px;border-radius:10px}
-      .hamburger span{display:block;width:20px;height:2px;background:var(--ink)}
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: saturate(1.4) blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 64px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+    }
+
+    .brand-text .t {
+      font-weight: 900;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-text .s {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .site-nav {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .site-nav a {
+      padding: 8px 6px;
+      border-radius: 8px;
+    }
+
+    .site-nav a:hover {
+      background: #f2f4fb;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .hamburger {
+      display: none;
+    }
+
+    @media (max-width: 960px) {
+      .site-nav { display: none; }
+      .hamburger {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 5px;
+        border: 1px solid var(--line);
+        background: #fff;
+        padding: 8px;
+        border-radius: 10px;
+      }
+      .hamburger span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: var(--ink);
+      }
     }
 
     /* Drawer */
-    .scrim{position:fixed;inset:0;background:rgba(11,16,32,.4);backdrop-filter:blur(2px)}
-    .drawer{position:fixed;top:0;right:0;height:100%;width:min(86vw,360px);background:#fff;border-left:1px solid var(--line);transform:translateX(100%);transition:transform .25s ease;z-index:60;display:flex;flex-direction:column}
-    .drawer[aria-hidden="false"]{transform:translateX(0)}
-    .drawer-head{display:flex;align-items:center;justify-content:space-between;padding:14px 14px;border-bottom:1px solid var(--line)}
-    .drawer-nav{display:flex;flex-direction:column;padding:8px 14px;gap:4px}
-    .d-link{padding:10px;border-radius:8px}
-    .d-link:hover{background:#f7f8fb}
-    .drawer-foot{margin-top:auto;padding:14px;border-top:1px solid var(--line)}
+    .scrim {
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 16, 32, 0.4);
+      backdrop-filter: blur(2px);
+    }
+
+    .drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: min(86vw, 360px);
+      background: #fff;
+      border-left: 1px solid var(--line);
+      transform: translateX(100%);
+      transition: transform 0.25s ease;
+      z-index: 60;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .drawer[aria-hidden="false"] {
+      transform: translateX(0);
+    }
+
+    .drawer-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .drawer-nav {
+      display: flex;
+      flex-direction: column;
+      padding: 8px 14px;
+      gap: 4px;
+    }
+
+    .d-link {
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .d-link:hover {
+      background: #f7f8fb;
+    }
+
+    .drawer-foot {
+      margin-top: auto;
+      padding: 14px;
+      border-top: 1px solid var(--line);
+    }
 
     /* Hero */
-    .hero{position:relative;background:linear-gradient(180deg,#fff, #f9fbff 60%, #fff)}
-    .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center}
-    @media (max-width:960px){.hero-inner{grid-template-columns:1fr}}
-    .hero-title{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.25;margin:.2rem 0 .4rem}
-    .typewriter{min-height:28px;font-weight:700;color:var(--accent)}
-    .stats{list-style:none;display:flex;gap:16px;padding:0;margin:12px 0 0}
-    .stat{border:1px dashed var(--line);padding:8px 10px;border-radius:10px}
-    .hero-bg{position:absolute;inset:auto 0 0 0;height:70px;background:radial-gradient(60% 100% at 50% 0,#e9ecff,transparent)}
+    .hero {
+      position: relative;
+      background: linear-gradient(180deg, #fff, #f9fbff 60%, #fff);
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    @media (max-width: 960px) {
+      .hero-inner { grid-template-columns: 1fr; }
+    }
+
+    .hero-title {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.25;
+      margin: 0.2rem 0 0.4rem;
+    }
+
+    .typewriter {
+      min-height: 28px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .stats {
+      list-style: none;
+      display: flex;
+      gap: 16px;
+      padding: 0;
+      margin: 12px 0 0;
+    }
+
+    .stat {
+      border: 1px dashed var(--line);
+      padding: 8px 10px;
+      border-radius: 10px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 70px;
+      background: radial-gradient(60% 100% at 50% 0, #e9ecff, transparent);
+    }
 
     /* Icon grids */
-    .icon-grid .icon-card{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:12px;background:#fff}
-    .icon{font-size:1.4rem}
-    .icon-grid.secondary{background:var(--surface)}
+    .icon-grid .icon-card {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      background: #fff;
+    }
+
+    .icon {
+      font-size: 1.4rem;
+    }
+
+    .icon-grid.secondary {
+      background: var(--surface);
+    }
 
     /* Videos */
-    .section-box{background:#fff;border:1px solid var(--line);border-radius:var(--r2);padding:16px}
-    .videos-grid{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
-    .video-embed{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
-    .video-embed iframe{position:absolute;inset:0;width:100%;height:100%}
-    .video-card{display:flex;flex-direction:column;gap:10px}
+    .section-box {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--r2);
+      padding: 16px;
+    }
 
-    /* Timeline */
-    .timeline{margin:0;padding-left:20px}
-    .timeline li{margin:.4rem 0}
+    .videos-grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+    }
 
-    /* Office/Lifestyle/Testimonials/Team cards common */
-    .profile{display:flex;gap:12px;align-items:center}
-    .avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}
+    .video-thumb {
+      height: 180px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      margin-bottom: 10px;
+    }
+
+    .video-card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
 
     /* FAQ */
-    details{border:1px solid var(--line);border-radius:12px;padding:10px}
-    details+details{margin-top:10px}
-    summary{cursor:pointer;font-weight:700}
+    details {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px;
+    }
+    details + details {
+      margin-top: 10px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+    }
 
     /* Footer / float */
-    .site-footer{background:#0b1020;color:#eaf;--line:rgba(255,255,255,.14)}
-    .site-footer a{color:#cfe}
-    .site-footer .card{background:rgba(255,255,255,.04)}
-    .f-brandcard__head{display:flex;align-items:center;gap:12px}
-    .f-brandcard__mark{font-weight:900;font-size:1.4rem}
-    .f-badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-    .f-quick{display:grid;gap:12px}
+    .site-footer {
+      background: #0b1020;
+      color: #eaf;
+      --line: rgba(255, 255, 255, 0.14);
+    }
 
-    .float-bar{position:fixed;right:12px;bottom:12px;display:flex;flex-direction:column;gap:8px;z-index:50}
-    .to-top{border:1px solid var(--line);background:#fff;border-radius:999px;width:42px;height:42px}
-    .apply-float{border-radius:999px}
+    .site-footer a {
+      color: #cfe;
+    }
 
-    /* watermarks */
-    .tp-watermark{position:absolute;inset:auto 0 -24px 0;text-align:center;font-weight:900;font-size:6rem;color:rgba(11,16,32,.03);pointer-events:none}
+    .site-footer .card {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .f-brandcard__head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .f-brandcard__mark {
+      font-weight: 900;
+      font-size: 1.4rem;
+    }
+
+    .f-badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .float-bar {
+      position: fixed;
+      right: 12px;
+      bottom: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 50;
+    }
+
+    .to-top {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 999px;
+      width: 42px;
+      height: 42px;
+    }
+
+    .apply-float {
+      border-radius: 999px;
+    }
+
+    .tp-watermark {
+      position: absolute;
+      inset: auto 0 -24px 0;
+      text-align: center;
+      font-weight: 900;
+      font-size: 6rem;
+      color: rgba(11, 16, 32, 0.03);
+      pointer-events: none;
+    }
+
   </style>
 </head>
 
 <body>
   <a class="visually-hidden" href="#main">メインへスキップ</a>
 
-  <!-- =========================================================
-       Header / ヘッダー
-  ========================================================== -->
+  <!-- ========================================================= -->
+  <!-- Header / ヘッダー                                            -->
+  <!-- ========================================================= -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a class="brand" href="#home" aria-label="TP ホーム">
@@ -218,7 +584,7 @@
     </div>
   </aside>
 
-  <!-- Slide-up Apply Bar -->
+  <!-- Slide-up Apply Bar (shows after scroll) -->
   <div class="apply-bar" aria-hidden="true" style="position:sticky;bottom:0;z-index:30;background:#fff;border-top:1px solid var(--line);padding:8px 0;display:none">
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:10px">
       <span class="eyebrow">海外キャリアに一歩。今すぐ応募</span>
@@ -231,9 +597,10 @@
   </div>
 
   <main id="main">
-    <!-- =========================================================
-         HERO / ヒーロー
-    ========================================================== -->
+
+    <!-- ========================================================= -->
+    <!-- HERO / ヒーロー                                             -->
+    <!-- ========================================================= -->
     <section id="home" class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
@@ -252,19 +619,15 @@
           </ul>
         </div>
         <div class="hero-media">
-          <img id="heroCover"
-               src="photos/KL%201.jpg"
-               alt="クアラルンプールのスカイライン"
-               loading="eager" decoding="async" fetchpriority="high"
-               style="width:100%;height:auto;border-radius:12px;object-fit:cover" />
+          <img id="heroCover" src="photos/KL%201.jpg" alt="クアラルンプールのスカイライン" loading="eager" decoding="async" fetchpriority="high" style="width:100%;height:auto;border-radius:12px;object-fit:cover" />
         </div>
       </div>
       <div class="hero-bg"></div>
     </section>
 
-    <!-- =========================================================
-         Global Locations / 世界拠点（提供ファイル使用）
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Global Locations / 世界拠点                                 -->
+    <!-- ========================================================= -->
     <section id="global-locations" class="u-pt0">
       <div class="container">
         <div class="section-head">
@@ -278,27 +641,23 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         About TP
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- About TP                                                   -->
+    <!-- ========================================================= -->
     <section id="about-tp">
       <div class="container">
         <div class="section-head">
           <h2 class="h2">About TP / テレパフォーマンスとは</h2>
           <p class="h2-sub">グローバルBPOのリーダーとして最高のCXを提供</p>
         </div>
-
         <div class="grid cols-2 cols-1-sm">
           <article class="card">
             <p>TPは1978年にフランス・パリで設立されたBPO企業。世界100カ国以上・50万人以上の従業員が最先端のテクノロジーと優れた人材を掛け合わせ、世界的ブランドのカスタマーエクスペリエンスを支えています。</p>
             <p>マレーシアとタイでは日本語スピーカーの採用を強化中。日本語中心のポジションから英語を活かすポジションまで、幅広いキャリアパスを用意しています。</p>
             <p class="u-mt8"><span class="pill">🏆 Great Place to Work®</span> <span class="pill">🌍 Diversity & Inclusion</span></p>
           </article>
-
           <aside class="card">
-            <figure class="u-m0">
-              <img src="photos/great%20place%20to%20work.png" alt="Great Place to Work 認証" style="height:70px" loading="lazy" />
-            </figure>
+            <img src="photos/great%20place%20to%20work.png" alt="Great Place to Work 認証" style="height:70px" loading="lazy" />
             <div class="u-mt12" style="display:flex;gap:10px;flex-wrap:wrap">
               <a class="btn ghost" href="#open-jobs">求人を見る</a>
               <a class="btn ghost" href="#career-growth">キャリア・語学</a>
@@ -308,16 +667,15 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         Open Jobs / 現在の募集
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Open Jobs / 現在の募集                                     -->
+    <!-- ========================================================= -->
     <section id="open-jobs" class="icon-grid priority">
       <div class="container">
         <div class="section-head">
           <h2 class="h2">Open Jobs / 現在の募集</h2>
           <p class="h2-sub">日本語対応のカスタマーサービスなど通年募集</p>
         </div>
-
         <div class="grid cols-3 cols-1-sm">
           <a class="card lift" target="_blank"
              href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE">
@@ -325,20 +683,17 @@
             <strong>カスタマーサービス（日本語）</strong>
             <p class="u-mt6 subtle">勤務地：KL / ペナン / バンコク</p>
           </a>
-
           <a class="card lift" href="#casual-interview">
             <img src="photos/Reception%20(1).png" alt="カジュアル面談" style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line);margin-bottom:10px" loading="lazy" />
             <strong>カジュアル面談（相談のみOK）</strong>
             <p class="u-mt6 subtle">応募前に不安や疑問を日本語で相談</p>
           </a>
-
           <a class="card lift" href="#faq">
             <img src="photos/Reception%20(2).png" alt="FAQ" style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line);margin-bottom:10px" loading="lazy" />
             <strong>FAQ・よくある質問</strong>
             <p class="u-mt6 subtle">応募・面接・移住など</p>
           </a>
         </div>
-
         <div class="u-center u-mt12">
           <a class="btn primary" target="_blank"
              href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE">ご応募はこちら</a>
@@ -346,30 +701,47 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         Salary & Benefits / 給与・福利厚生
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Salary & Benefits                                         -->
+    <!-- ========================================================= -->
     <section id="salary-benefits">
       <div class="container">
         <div class="section-head">
           <h2 class="h2">給与・福利厚生</h2>
           <p class="h2-sub">"安心・成長・楽しさ"を全方位でサポート</p>
         </div>
-
         <div class="grid cols-3 cols-1-sm">
-          <div class="card"><strong>医療保険完備</strong><p class="subtle">入社初日から適用。</p></div>
-          <div class="card"><strong>片道航空券支給</strong><p class="subtle">日本からの渡航費用を会社負担。</p></div>
-          <div class="card"><strong>初期宿泊サポート</strong><p class="subtle">到着後6泊7日ホテル提供。</p></div>
-          <div class="card"><strong>語学研修制度</strong><p class="subtle">GoFluent 等のプログラム。</p></div>
-          <div class="card"><strong>社内イベント</strong><p class="subtle">チームビルディングと表彰。</p></div>
-          <div class="card"><strong>キャリアパス</strong><p class="subtle">明確な昇進制度。</p></div>
+          <div class="card">
+            <strong>医療保険完備</strong>
+            <p class="subtle">入社初日から適用。</p>
+          </div>
+          <div class="card">
+            <strong>片道航空券支給</strong>
+            <p class="subtle">日本からの渡航費用を会社負担。</p>
+          </div>
+          <div class="card">
+            <strong>初期宿泊サポート</strong>
+            <p class="subtle">到着後6泊7日ホテル提供。</p>
+          </div>
+          <div class="card">
+            <strong>語学研修制度</strong>
+            <p class="subtle">GoFluent 等のプログラム。</p>
+          </div>
+          <div class="card">
+            <strong>社内イベント</strong>
+            <p class="subtle">チームビルディングと表彰。</p>
+          </div>
+          <div class="card">
+            <strong>キャリアパス</strong>
+            <p class="subtle">明確な昇進制度。</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-         Relocation & Visa / 移住・ビザ
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Relocation & Visa                                         -->
+    <!-- ========================================================= -->
     <section id="relocation-visa">
       <div class="container">
         <div class="section-head">
@@ -396,9 +768,9 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         Interview Process / 面接プロセス
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Interview Process                                         -->
+    <!-- ========================================================= -->
     <section id="interview-process">
       <div class="container">
         <div class="section-head">
@@ -417,9 +789,9 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         Why Malaysia & Thailand / 勤務先都市
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Why Malaysia & Thailand                                   -->
+    <!-- ========================================================= -->
     <section id="why-mt">
       <div class="container">
         <div class="section-head">
@@ -428,36 +800,36 @@
         </div>
         <div class="grid cols-3 cols-1-sm">
           <article class="card lift">
-            <img src="photos/KL%201.jpg" alt="クアラルンプールの街並み" loading="lazy"
-                 style="height:180px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line);margin-bottom:10px" />
+            <img src="photos/KL%201.jpg" alt="クアラルンプールの街並み" loading="lazy" style="height:180px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line);margin-bottom:10px" />
             <h4 class="u-mt0">クアラルンプール（KL）</h4>
             <ul class="subtle u-mt6">
-              <li>日本語対応クリニック・スーパー充実</li><li>MRT/モノレールで通勤便利</li>
+              <li>日本語対応クリニック・スーパー充実</li>
+              <li>MRT/モノレールで通勤便利</li>
             </ul>
           </article>
           <article class="card lift">
-            <img src="photos/Penang%201.jpg" alt="ペナンの街並み" loading="lazy"
-                 style="height:180px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line);margin-bottom:10px" />
+            <img src="photos/Penang%201.jpg" alt="ペナンの街並み" loading="lazy" style="height:180px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line);margin-bottom:10px" />
             <h4 class="u-mt0">ペナン</h4>
             <ul class="subtle u-mt6">
-              <li>世界遺産ジョージタウン</li><li>物価が安く住みやすい</li>
+              <li>世界遺産ジョージタウン</li>
+              <li>物価が安く住みやすい</li>
             </ul>
           </article>
           <article class="card lift">
-            <img src="photos/Bangkok%201.jpg" alt="バンコクの街並み" loading="lazy"
-                 style="height:180px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line);margin-bottom:10px" />
+            <img src="photos/Bangkok%201.jpg" alt="バンコクの街並み" loading="lazy" style="height:180px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line);margin-bottom:10px" />
             <h4 class="u-mt0">バンコク</h4>
             <ul class="subtle u-mt6">
-              <li>日本人コミュニティが大きい</li><li>BTS/MRTで移動快適</li>
+              <li>日本人コミュニティが大きい</li>
+              <li>BTS/MRTで移動快適</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-         Casual Interview / カジュアル面談（CTA）
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Casual Interview / カジュアル面談                          -->
+    <!-- ========================================================= -->
     <section id="casual-interview">
       <div class="container">
         <div class="section-head">
@@ -479,46 +851,36 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         Videos / 動画で知る TP
-    ========================================================== -->
-    <section id="videos">
+    <!-- ========================================================= -->
+    <!-- Videos (thumbnails placeholders using provided images)     -->
+    <!-- ========================================================= -->
+    <section id="videos" class="u-pt0">
       <div class="container section-box">
         <div class="section-head">
           <span class="eyebrow">動画</span>
-          <h2 class="h2">TP を動画で知る</h2>
-          <p class="h2-sub">オフィス、社員の声、カルチャーをピックアップ</p>
+          <h2 class="h2">TP を動画で知る（サムネイル プレースホルダー）</h2>
+          <p class="h2-sub">画像をクリックで後日動画に差し替え予定</p>
         </div>
-        <div id="videosGrid" class="videos-grid">
-          <!-- fallback embeds (no JS needed) -->
-          <div class="video-card">
-            <div class="video-embed">
-              <iframe title="オフィス紹介" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                      loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="video-meta">オフィス紹介（サンプル）</div>
+        <div class="videos-grid">
+          <div class="video-card card">
+            <img class="video-thumb" src="photos/Reception.png" alt="オフィス紹介（後日差し替え）" loading="lazy" />
+            <div class="video-meta">オフィス紹介（後日差し替え） — Text 201</div>
           </div>
-          <div class="video-card">
-            <div class="video-embed">
-              <iframe title="社員インタビュー" src="https://www.youtube.com/embed/oHg5SJYRHA0"
-                      loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="video-meta">社員インタビュー（サンプル）</div>
+          <div class="video-card card">
+            <img class="video-thumb" src="photos/Reception%20(1).png" alt="社員インタビュー（後日差し替え）" loading="lazy" />
+            <div class="video-meta">社員インタビュー（後日差し替え） — Text 201</div>
           </div>
-          <div class="video-card">
-            <div class="video-embed">
-              <iframe title="カルチャー" src="https://www.youtube.com/embed/2Z4m4lnjxkY"
-                      loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="video-meta">カルチャー（サンプル）</div>
+          <div class="video-card card">
+            <img class="video-thumb" src="photos/Reception%20(2).png" alt="カルチャー（後日差し替え）" loading="lazy" />
+            <div class="video-meta">カルチャー（後日差し替え） — Text 201</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-         Testimonials & Interview Stories / 社員の声
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Testimonials & Interview Stories / 社員の声               -->
+    <!-- ========================================================= -->
     <section id="testimonials">
       <div class="container">
         <div class="section-head">
@@ -527,20 +889,17 @@
         </div>
         <div class="grid cols-3 cols-1-sm">
           <article class="card">
-            <img src="photos/Joseph%20Hiroyuki%20Ueda.jpg" alt="Joseph さん" loading="lazy"
-                 style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line)" />
+            <img src="photos/Joseph%20Hiroyuki%20Ueda.jpg" alt="Joseph さん" loading="lazy" style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line)" />
             <div class="u-mt8"><strong>Joseph</strong></div>
             <p class="subtle">「多国籍な環境で毎日が刺激的。成長実感があります。」</p>
           </article>
           <article class="card">
-            <img src="photos/Maho.png" alt="Maho さん" loading="lazy"
-                 style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line)" />
+            <img src="photos/Maho.png" alt="Maho さん" loading="lazy" style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line)" />
             <div class="u-mt8"><strong>Maho</strong></div>
             <p class="subtle">「日本語ポジションからキャリアアップできました。」</p>
           </article>
           <article class="card">
-            <img src="photos/Akito%20san.jpg" alt="Akito さん" loading="lazy"
-                 style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line)" />
+            <img src="photos/Akito%20san.jpg" alt="Akito さん" loading="lazy" style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line)" />
             <div class="u-mt8"><strong>Akito</strong></div>
             <p class="subtle">「生活のしやすさと仕事の手応え、両方感じています。」</p>
           </article>
@@ -548,49 +907,41 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         Office & Work Environment / オフィス紹介 + バーチャルツアー
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Office & Work Environment                                 -->
+    <!-- ========================================================= -->
     <section id="office-environment">
       <div class="container">
         <div class="section-head">
           <h2 class="h2">働く環境 / オフィス</h2>
           <p class="h2-sub">アクセス良好で快適なワークプレイス</p>
         </div>
-
         <div class="grid cols-3 cols-1-sm">
           <article class="card lift">
-            <img src="photos/G%20TOWER.jpg" alt="G TOWER 外観" loading="lazy"
-                 style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line);margin-bottom:10px" />
+            <img src="photos/G%20TOWER.jpg" alt="G TOWER（KL）" loading="lazy" style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line);margin-bottom:10px" />
             <h4 class="u-mt0">G TOWER（KL）</h4>
             <p class="subtle">中心地へのアクセスが良く通勤も快適。</p>
           </article>
           <article class="card lift">
-            <img src="photos/GBS.jpeg" alt="GBS オフィス" loading="lazy"
-                 style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line);margin-bottom:10px" />
+            <img src="photos/GBS.jpeg" alt="GBS センター" loading="lazy" style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line);margin-bottom:10px" />
             <h4 class="u-mt0">GBS センター</h4>
             <p class="subtle">モダンでコラボレーションしやすい空間。</p>
           </article>
           <article class="card lift">
-            <img src="photos/Reception%20(1).png" alt="オフィス レセプション" loading="lazy"
-                 style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line);margin-bottom:10px" />
+            <img src="photos/Reception%20(1).png" alt="レセプション" loading="lazy" style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--line);margin-bottom:10px" />
             <h4 class="u-mt0">レセプション</h4>
             <p class="subtle">訪れる人を明るく迎える受付。</p>
           </article>
         </div>
-
         <div class="u-center u-mt12">
-          <div class="video-embed" style="max-width:800px;margin:0 auto">
-            <iframe title="バーチャルオフィスツアー（サンプル）" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                    loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
+          <div class="card">Text 220 — バーチャルツアー埋め込み枠（後日差し替え）</div>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-         Career Growth / Language Bootcamp & GoFluent
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Career Growth / Language Bootcamp & GoFluent              -->
+    <!-- ========================================================= -->
     <section id="career-growth">
       <div class="container">
         <div class="section-head">
@@ -598,16 +949,25 @@
           <p class="h2-sub">実力次第でキャリアアップ。学びの機会も充実</p>
         </div>
         <div class="grid cols-3 cols-1-sm">
-          <div class="card"><strong>キャリアパス</strong><p class="subtle">トレーナー、QA、TL、Mgrへ。</p></div>
-          <div class="card"><strong>Language Bootcamp</strong><p class="subtle">基礎〜実務で役立つ表現を強化。</p></div>
-          <div class="card"><strong>GoFluent</strong><p class="subtle">オンライン教材で英語力UP。</p></div>
+          <div class="card">
+            <strong>キャリアパス</strong>
+            <p class="subtle">トレーナー、QA、TL、Mgrへ。</p>
+          </div>
+          <div class="card">
+            <strong>Language Bootcamp</strong>
+            <p class="subtle">基礎〜実務で役立つ表現を強化。</p>
+          </div>
+          <div class="card">
+            <strong>GoFluent</strong>
+            <p class="subtle">オンライン教材で英語力UP。</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-         Cost of Living / 生活コスト
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Cost of Living                                             -->
+    <!-- ========================================================= -->
     <section id="cost-of-living">
       <div class="container">
         <div class="section-head">
@@ -632,9 +992,9 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         Daily Life in Malaysia / マレーシアの日常
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Daily Life in Malaysia                                     -->
+    <!-- ========================================================= -->
     <section id="daily-life">
       <div class="container">
         <div class="section-head">
@@ -662,16 +1022,16 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         Meet the TA Team / 採用チーム（5人版）
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Meet the TA Team / 採用チーム                              -->
+    <!-- ========================================================= -->
     <section id="ta-team">
       <div class="container">
         <div class="section-head">
           <h2 class="h2">採用チーム（TA）</h2>
           <p class="h2-sub">応募から入社まで、日本語で伴走します</p>
         </div>
-        <div class="grid cols-5 cols-1-sm">
+        <div class="grid cols-3 cols-1-sm">
           <article class="card">
             <img class="avatar" src="photos/Maho%20in%20front%20ofKLCC.jpg" alt="Maho（TA）" loading="lazy" />
             <div class="u-mt6"><strong>Maho</strong><div class="subtle">Talent Acquisition</div></div>
@@ -681,24 +1041,16 @@
             <div class="u-mt6"><strong>Joseph</strong><div class="subtle">Talent Acquisition</div></div>
           </article>
           <article class="card">
-            <img class="avatar" src="photos/Akito%20san.jpg" alt="Akito（Recruiter）" loading="lazy" />
+            <img class="avatar" src="photos/Akito%20san.jpg" alt="Akito（TA）" loading="lazy" />
             <div class="u-mt6"><strong>Akito</strong><div class="subtle">Recruiter</div></div>
-          </article>
-          <article class="card">
-            <img class="avatar" src="photos/Koyori.jpg" alt="Koyori（Recruiter）" loading="lazy" />
-            <div class="u-mt6"><strong>Koyori</strong><div class="subtle">Recruiter</div></div>
-          </article>
-          <article class="card">
-            <img class="avatar" src="photos/Daichi.jpg" alt="Daichi（Coordinator）" loading="lazy" />
-            <div class="u-mt6"><strong>Daichi</strong><div class="subtle">Coordinator</div></div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-         Area Around the Office / オフィス周辺
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Area Around the Office / オフィス周辺                       -->
+    <!-- ========================================================= -->
     <section id="area-around-office">
       <div class="container">
         <div class="section-head">
@@ -722,9 +1074,9 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         Blog and Useful Articles / ブログ
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Blog and Useful Articles / ブログ                           -->
+    <!-- ========================================================= -->
     <section id="blog">
       <div class="container">
         <div class="section-head">
@@ -733,21 +1085,60 @@
         </div>
         <div class="grid cols-3 cols-1-sm">
           <a class="card lift" href="#" aria-disabled="true">
-            <strong>Text 004</strong><p class="subtle">記事の概要。後で差し替え。</p>
+            <strong>Text 004</strong>
+            <p class="subtle">記事の概要。後で差し替え。</p>
           </a>
           <a class="card lift" href="#" aria-disabled="true">
-            <strong>Text 005</strong><p class="subtle">記事の概要。後で差し替え。</p>
+            <strong>Text 005</strong>
+            <p class="subtle">記事の概要。後で差し替え。</p>
           </a>
           <a class="card lift" href="#" aria-disabled="true">
-            <strong>Text 006</strong><p class="subtle">記事の概要。後で差し替え。</p>
+            <strong>Text 006</strong>
+            <p class="subtle">記事の概要。後で差し替え。</p>
+          </a>
+          <a class="card lift" href="#" aria-disabled="true">
+            <strong>Text 007</strong>
+            <p class="subtle">記事の概要。後で差し替え。</p>
+          </a>
+          <a class="card lift" href="#" aria-disabled="true">
+            <strong>Text 008</strong>
+            <p class="subtle">記事の概要。後で差し替え。</p>
+          </a>
+          <a class="card lift" href="#" aria-disabled="true">
+            <strong>Text 009</strong>
+            <p class="subtle">記事の概要。後で差し替え。</p>
+          </a>
+          <a class="card lift" href="#" aria-disabled="true">
+            <strong>Text 010</strong>
+            <p class="subtle">記事の概要。後で差し替え。</p>
+          </a>
+          <a class="card lift" href="#" aria-disabled="true">
+            <strong>Text 011</strong>
+            <p class="subtle">記事の概要。後で差し替え。</p>
+          </a>
+          <a class="card lift" href="#" aria-disabled="true">
+            <strong>Text 012</strong>
+            <p class="subtle">記事の概要。後で差し替え。</p>
+          </a>
+          <a class="card lift" href="#" aria-disabled="true">
+            <strong>Text 013</strong>
+            <p class="subtle">記事の概要。後で差し替え。</p>
+          </a>
+          <a class="card lift" href="#" aria-disabled="true">
+            <strong>Text 014</strong>
+            <p class="subtle">記事の概要。後で差し替え。</p>
+          </a>
+          <a class="card lift" href="#" aria-disabled="true">
+            <strong>Text 015</strong>
+            <p class="subtle">記事の概要。後で差し替え。</p>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-         LINE Updates / LINE公式
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- LINE Updates / LINE公式                                     -->
+    <!-- ========================================================= -->
     <section id="line-updates" class="icon-grid secondary">
       <div class="container">
         <div class="section-head">
@@ -767,26 +1158,59 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         Company Culture & Events / カルチャー
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Company Culture & Events                                   -->
+    <!-- ========================================================= -->
     <section id="culture-events">
       <div class="container">
         <div class="section-head">
           <h2 class="h2">Company Culture & Events</h2>
-          <p class="h2-sub">D&I・社内コミュニティ・表彰制度</p>
+          <p class="h2-sub">D&amp;I・社内コミュニティ・表彰制度</p>
         </div>
         <div class="grid cols-3 cols-1-sm">
-          <div class="card"><strong>多様性の尊重</strong><p class="subtle">Text 007</p></div>
-          <div class="card"><strong>イベント</strong><p class="subtle">Text 008</p></div>
-          <div class="card"><strong>表彰制度</strong><p class="subtle">Text 009</p></div>
+          <div class="card">
+            <strong>Text 007</strong>
+            <p class="subtle">後で差し替え。</p>
+          </div>
+          <div class="card">
+            <strong>Text 008</strong>
+            <p class="subtle">後で差し替え。</p>
+          </div>
+          <div class="card">
+            <strong>Text 009</strong>
+            <p class="subtle">後で差し替え。</p>
+          </div>
+          <div class="card">
+            <strong>Text 010</strong>
+            <p class="subtle">後で差し替え。</p>
+          </div>
+          <div class="card">
+            <strong>Text 011</strong>
+            <p class="subtle">後で差し替え。</p>
+          </div>
+          <div class="card">
+            <strong>Text 012</strong>
+            <p class="subtle">後で差し替え。</p>
+          </div>
+          <div class="card">
+            <strong>Text 013</strong>
+            <p class="subtle">後で差し替え。</p>
+          </div>
+          <div class="card">
+            <strong>Text 014</strong>
+            <p class="subtle">後で差し替え。</p>
+          </div>
+          <div class="card">
+            <strong>Text 015</strong>
+            <p class="subtle">後で差し替え。</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-         Ask ChatGPT（プロンプト配布）
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Ask ChatGPT Section                                        -->
+    <!-- ========================================================= -->
     <section id="ask-chatgpt">
       <div class="container">
         <div class="section-head">
@@ -794,7 +1218,7 @@
           <p class="h2-sub">下のプロンプトをコピーして、ChatGPTに貼り付けてください。</p>
         </div>
         <div class="card">
-          <textarea id="chatgptPrompt" rows="8" style="width:100%;resize:vertical" readonly></textarea>
+          <textarea id="chatgptPrompt" rows="10" style="width:100%;resize:vertical" readonly></textarea>
           <div class="u-mt12" style="display:flex;gap:10px;flex-wrap:wrap">
             <button id="copyPromptBtn" class="btn">プロンプトをコピー</button>
             <button id="openChatGPTBtn" class="btn ghost">ChatGPT を開く</button>
@@ -804,9 +1228,9 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         Mini FAQ / よくある質問
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Mini FAQ / よくある質問                                   -->
+    <!-- ========================================================= -->
     <section id="faq">
       <div class="container">
         <div class="section-head">
@@ -814,16 +1238,28 @@
           <p class="h2-sub">応募・面接・移住・生活など</p>
         </div>
         <div class="card">
-          <details><summary>応募から入社までの期間は？</summary><p class="subtle">通常は数週間程度（案件により異なります）。</p></details>
-          <details><summary>英語に自信がないのですが？</summary><p class="subtle">日本語中心の業務からスタート可。語学研修もあり。</p></details>
-          <details><summary>住居や医療など生活面のサポートは？</summary><p class="subtle">到着後ホテル、医療保険、生活立ち上げサポートあり。</p></details>
+          <details><summary>Text Q001</summary><p class="subtle">Text A001</p></details>
+          <details><summary>Text Q002</summary><p class="subtle">Text A002</p></details>
+          <details><summary>Text Q003</summary><p class="subtle">Text A003</p></details>
+          <details><summary>Text Q004</summary><p class="subtle">Text A004</p></details>
+          <details><summary>Text Q005</summary><p class="subtle">Text A005</p></details>
+          <details><summary>Text Q006</summary><p class="subtle">Text A006</p></details>
+          <details><summary>Text Q007</summary><p class="subtle">Text A007</p></details>
+          <details><summary>Text Q008</summary><p class="subtle">Text A008</p></details>
+          <details><summary>Text Q009</summary><p class="subtle">Text A009</p></details>
+          <details><summary>Text Q010</summary><p class="subtle">Text A010</p></details>
+          <details><summary>Text Q011</summary><p class="subtle">Text A011</p></details>
+          <details><summary>Text Q012</summary><p class="subtle">Text A012</p></details>
+          <details><summary>Text Q013</summary><p class="subtle">Text A013</p></details>
+          <details><summary>Text Q014</summary><p class="subtle">Text A014</p></details>
+          <details><summary>Text Q015</summary><p class="subtle">Text A015</p></details>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-         External RAF / リファラル
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- External RAF / リファラル                                  -->
+    <!-- ========================================================= -->
     <section id="external-raf">
       <div class="container">
         <div class="section-head">
@@ -836,14 +1272,20 @@
             <li>Text 012</li>
             <li>Text 013</li>
             <li>Text 014</li>
+            <li>Text 015</li>
+            <li>Text 016</li>
+            <li>Text 017</li>
+            <li>Text 018</li>
+            <li>Text 019</li>
+            <li>Text 020</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-         Contact / お問い合わせ
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Contact                                                    -->
+    <!-- ========================================================= -->
     <section id="contact">
       <div class="container" style="position:relative">
         <div class="tp-watermark" aria-hidden="true">TP</div>
@@ -851,7 +1293,6 @@
           <h2 class="h2">お問い合わせ</h2>
           <p class="h2-sub">日本語で気軽にご相談ください。面談予約や応募のご質問も歓迎です。</p>
         </div>
-
         <div class="grid cols-2 cols-1-sm">
           <form id="contactForm" class="card" novalidate>
             <div class="grid cols-2 cols-1-sm">
@@ -874,7 +1315,6 @@
                  href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE">応募ページを開く</a>
             </div>
           </form>
-
           <aside class="card">
             <h3 class="u-mt0">すぐに確認したい方へ</h3>
             <ul class="subtle" style="padding-left:18px">
@@ -889,9 +1329,9 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         Footer
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Footer                                                     -->
+    <!-- ========================================================= -->
     <footer class="site-footer">
       <div class="container" style="display:grid;gap:18px;padding:24px 16px">
         <div class="card" style="display:grid;gap:10px">
@@ -908,7 +1348,6 @@
             <img src="photos/LV.png" alt="パートナー例（LV ロゴ）" height="24" loading="lazy" decoding="async" />
           </div>
         </div>
-
         <div class="card">
           <h4 class="u-mt0">クイックリンク</h4>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
@@ -924,73 +1363,76 @@
             <a href="#why-mt">勤務先都市</a>
           </div>
         </div>
-
         <div class="u-center" style="color:#cfe">
           © <span id="year"></span> Teleperformance. All rights reserved.
         </div>
       </div>
     </footer>
 
-    <!-- =========================================================
-         Floating action buttons
-    ========================================================== -->
+    <!-- ========================================================= -->
+    <!-- Floating action buttons                                   -->
+    <!-- ========================================================= -->
     <div id="floatBar" class="float-bar" aria-hidden="false">
       <button id="toTopBtn" class="to-top" type="button" aria-label="ページ上部へ">↑</button>
       <a class="btn primary apply-float"
          href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE"
          target="_blank" rel="noopener">ご応募はこちら</a>
     </div>
+
   </main>
 
   <noscript>
     <div class="card" style="margin:16px" role="status">JavaScript を有効にすると表示やコピー機能がより快適になります。</div>
   </noscript>
 
-  <!-- Minimal JS (inline so this page is self-contained) -->
+  <!-- Minimal JS (inline) -->
   <script>
     // Year
-    (function(){var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();})();
+    (function(){
+      var y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
 
     // Drawer
     (function(){
-      var menuBtn=document.getElementById('menuBtn');
-      var drawer=document.getElementById('drawer');
-      var scrim=document.getElementById('scrim');
-      var close=document.getElementById('closeDrawer');
-      function open(){drawer.setAttribute('aria-hidden','false'); scrim.hidden=false; menuBtn.setAttribute('aria-expanded','true');}
-      function shut(){drawer.setAttribute('aria-hidden','true'); scrim.hidden=true; menuBtn.setAttribute('aria-expanded','false');}
-      menuBtn&&menuBtn.addEventListener('click',open);
-      close&&close.addEventListener('click',shut);
-      scrim&&scrim.addEventListener('click',shut);
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer  = document.getElementById('drawer');
+      var scrim   = document.getElementById('scrim');
+      var close   = document.getElementById('closeDrawer');
+      function open(){ drawer.setAttribute('aria-hidden','false'); scrim.hidden=false; menuBtn.setAttribute('aria-expanded','true'); }
+      function shut(){ drawer.setAttribute('aria-hidden','true');  scrim.hidden=true;  menuBtn.setAttribute('aria-expanded','false'); }
+      if(menuBtn) menuBtn.addEventListener('click', open);
+      if(close)   close.addEventListener('click', shut);
+      if(scrim)   scrim.addEventListener('click', shut);
     })();
 
     // Smooth scroll for in-page anchors
     (function(){
-      document.addEventListener('click',function(e){
-        var a=e.target.closest('a[href^="#"]');
+      document.addEventListener('click', function(e){
+        var a = e.target.closest('a[href^="#"]');
         if(!a) return;
-        var id=a.getAttribute('href').slice(1);
+        var id = a.getAttribute('href').slice(1);
         if(!id) return;
-        var el=document.getElementById(id);
+        var el = document.getElementById(id);
         if(!el) return;
         e.preventDefault();
-        window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-70,behavior:'smooth'});
+        window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' });
       });
     })();
 
     // Typewriter
     (function(){
-      var el=document.getElementById('heroType');
+      var el = document.getElementById('heroType');
       if(!el) return;
-      var msgs=['KL・ペナン・バンコクで働く。','就労ビザと移住サポート。','日本語を活かしてキャリアアップ。'];
+      var msgs = ['KL・ペナン・バンコクで働く。','就労ビザと移住サポート。','日本語を活かしてキャリアアップ。'];
       var i=0, j=0, dir=1, hold=0;
       function tick(){
         if(!el) return;
-        if(hold>0){hold--;return requestAnimationFrame(tick);}
-        el.textContent=msgs[i].slice(0,j);
-        j+=dir;
-        if(j===msgs[i].length+1){dir=-1;hold=30}
-        if(j===0){dir=1;i=(i+1)%msgs.length;hold=10}
+        if(hold>0){ hold--; return requestAnimationFrame(tick); }
+        el.textContent = msgs[i].slice(0,j);
+        j += dir;
+        if(j === msgs[i].length+1){ dir=-1; hold=30 }
+        if(j === 0){ dir=1; i=(i+1)%msgs.length; hold=10 }
         requestAnimationFrame(tick);
       }
       tick();
@@ -998,66 +1440,25 @@
 
     // Back to top + show apply bar after scroll
     (function(){
-      var btn=document.getElementById('toTopBtn');
-      var bar=document.querySelector('.apply-bar');
-      window.addEventListener('scroll',function(){
-        if(window.scrollY>480){ bar && (bar.style.display='block'); } else { bar && (bar.style.display='none'); }
+      var btn = document.getElementById('toTopBtn');
+      var bar = document.querySelector('.apply-bar');
+      window.addEventListener('scroll', function(){
+        if(window.scrollY > 480){ if(bar) bar.style.display='block'; } else { if(bar) bar.style.display='none'; }
       });
-      btn&&btn.addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+      if(btn) btn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
     })();
 
-    // Ask ChatGPT prompt content
-    (function(){
-      var t=document.getElementById('chatgptPrompt');
+    // Ask ChatGPT prompt content (generated to reference only provided files)
+    ;(function(){
+      var t = document.getElementById('chatgptPrompt');
       if(!t) return;
-      t.value =
-`You are GPT-5 Thinking. Build the TP Japan recruiting website content strictly from the files I share. Do NOT browse.
-If something is missing, insert placeholders "Text 001", "Text 002", etc. Keep the structure and the section order exactly.
-
-Pages/Sections to match:
-Home, About TP, Open Jobs, Salary & Benefits, Relocation & Visa Support, Interview Process,
-Why Malaysia & Thailand, Casual Interview, Testimonials & Interview Stories, Office & Work Environment / Virtual Office Tour,
-Career Growth Opportunities / Language Bootcamp & GoFluent, Cost of Living, Daily Life in Malaysia, Meet the TA Team,
-Area Around the Office, Blog and Useful Articles, LINE Updates, Company Culture & Events, FAQ, External RAF.
-
-Assets (exact filenames—including spaces):
-photos/TPLogo11.png
-photos/great place to work.png
-photos/KL 1.jpg
-photos/KL 2.jpg
-photos/Penang 1.jpg
-photos/Bangkok 1.jpg
-photos/Bangkok 2.jpg
-photos/Condo.jpg
-photos/G TOWER.jpg
-photos/GBS.jpeg
-photos/Reception.png
-photos/Reception (1).png
-photos/Reception (2).png
-photos/Maho.png
-photos/Maho in front ofKLCC.jpg
-photos/Akito san.jpg
-photos/Joseph Hiroyuki Ueda.jpg
-photos/Joseph on vacation.jpg
-photos/LV.png
-photos/world map locations.png
-(Plus placeholders you asked me to include)
-photos/Koyori.jpg
-photos/Daichi.jpg
-
-Rules:
-- Japanese copywriting. Use only the content in my files; no outside info.
-- Accessibility: alt text, semantic HTML, keyboard focus.
-- Performance: lazy-load large images.
-- Links must work immediately in this single-page version (anchor links).`;
+      t.value = 'You are GPT-5 Thinking. Use ONLY the content in the file I share with you (no browsing).\nIf something is missing, insert placeholders like "Text 001", "Text 002", etc.\nKeep the structure and section order exactly as listed below.\n\nSections:\nHome, About TP, Open Jobs, Salary & Benefits, Relocation & Visa Support, Interview Process,\nWhy Malaysia & Thailand, Casual Interview, Testimonials & Interview Stories,\nOffice & Work Environment / Virtual Office Tour, Career Growth Opportunities / Language Bootcamp & GoFluent,\nCost of Living, Daily Life in Malaysia, Meet the TA Team, Area Around the Office,\nBlog and Useful Articles, LINE Updates, Company Culture & Events, FAQ, External RAF, Contact.\n\nAssets (exact filenames from my folder):\nphotos/TPLogo11.png\nphotos/great place to work.png\nphotos/KL 1.jpg\nphotos/KL 2.jpg\nphotos/Penang 1.jpg\nphotos/Bangkok 1.jpg\nphotos/Bangkok 2.jpg\nphotos/Condo.jpg\nphotos/G TOWER.jpg\nphotos/GBS.jpeg\nphotos/Reception.png\nphotos/Reception (1).png\nphotos/Reception (2).png\nphotos/Maho.png\nphotos/Maho in front ofKLCC.jpg\nphotos/Akito san.jpg\nphotos/Joseph Hiroyuki Ueda.jpg\nphotos/Joseph on vacation.jpg\nphotos/LV.png\nphotos/world map locations.png\n\nImportant:\n- Do not invent new people or assets. Do not use non-provided images.\n- Navigation must use anchor links that exist on the page.\n- Alt text in Japanese, accessible HTML, focusable controls.\n- Lazy-load large images, no external video embeds.\n- If content is missing: use \'Text + number\' placeholders.\n';
       var c=document.getElementById('copyPromptBtn');
       var o=document.getElementById('openChatGPTBtn');
-      c&&c.addEventListener('click',function(){
-        t.select(); t.setSelectionRange(0,99999); document.execCommand('copy');
-        c.textContent='コピーしました'; setTimeout(()=>c.textContent='プロンプトをコピー',1500);
-      });
-      o&&o.addEventListener('click',function(){ window.open('https://chat.openai.com/','_blank','noopener'); });
+      if(c) c.addEventListener('click', function(){ t.select(); t.setSelectionRange(0,99999); document.execCommand('copy'); c.textContent='コピーしました'; setTimeout(function(){c.textContent='プロンプトをコピー';},1500); });
+      if(o) o.addEventListener('click', function(){ window.open('https://chat.openai.com/','_blank','noopener'); });
     })();
   </script>
+
 </body>
 </html>
