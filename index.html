@@ -1,16 +1,15 @@
-<!-- FILENAME: index.html -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>暮らすように、海外で働く。マレーシア・タイ求人 | TP Japan</title>
-<meta name="description" content="あなたの新しいキャリアの舞台に、マレーシアという選択を。多国籍な環境と、日本語を活かせる仕事。コストを抑えた快適な暮らし。そんな ちょうどいい 海外生活、マレーシアで始めませんか？">
+<meta name="description" content="テレパフォーマンスマレーシア・タイの日本語スピーカー採用サイト。多国籍な環境で、日本語を活かせる仕事。移住サポート完備。">
 <meta name="theme-color" content="#000000">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="暮らすように、海外で働く。マレーシア・タイ求人 | TP Japan">
-<meta property="og:description" content="あなたの新しいキャリアの舞台に、マレーシアという選択を。多国籍な環境と、日本語を活かせる仕事。">
+<meta property="og:description" content="テレパフォーマンスマレーシア・タイの日本語スピーカー採用サイト。">
 <meta property="og:image" content="photos/TPLogo11.png">
 <link rel="icon" href="photos/TPLogo11.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,8 +27,8 @@
   --tp-light: #e5e5e5;
   --tp-off: #f5f5f5;
   --tp-white: #ffffff;
-  --accent-red: #e60012;
-  --accent-blue: #0047AB;
+  --accent-purple: #780096;
+  --accent-pink: #ff0082;
   --max: 1200px;
   --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
   --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
@@ -159,18 +158,18 @@ nav a[aria-current="page"]::after {
 }
 
 .apply-btn {
-  background: var(--tp-black);
+  background: var(--accent-purple);
   color: var(--tp-white);
   padding: 10px 24px;
   border-radius: 4px;
   font-weight: 600;
-  border: 2px solid var(--tp-black);
+  border: 2px solid var(--accent-purple);
   transition: all 0.3s;
 }
 
 .apply-btn:hover {
   background: var(--tp-white);
-  color: var(--tp-black);
+  color: var(--accent-purple);
 }
 
 .apply-btn::after {
@@ -255,6 +254,19 @@ nav a[aria-current="page"]::after {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+.btn-accent {
+  background: var(--accent-purple);
+  color: var(--tp-white);
+  border-color: var(--accent-purple);
+}
+
+.btn-accent:hover {
+  background: var(--tp-white);
+  color: var(--accent-purple);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(120,0,150,0.15);
+}
+
 .btn-secondary {
   background: var(--tp-white);
   color: var(--tp-black);
@@ -333,10 +345,45 @@ nav a[aria-current="page"]::after {
   font-size: 1.1rem;
 }
 
+/* About Section */
+.about-section {
+  padding: 80px 20px;
+  background: var(--tp-white);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.about-text {
+  color: var(--tp-gray-dark);
+  line-height: 1.9;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+}
+
 /* Priority Menu */
 .priority-menu {
   padding: 80px 20px;
-  background: var(--tp-white);
+  background: var(--tp-off);
 }
 
 .cards {
@@ -398,10 +445,10 @@ nav a[aria-current="page"]::after {
   line-height: 1.6;
 }
 
-/* Icon Grid - Secondary Section */
+/* Secondary Icon Grid */
 .icon-grid {
   padding: 80px 20px;
-  background: var(--tp-off);
+  background: var(--tp-white);
 }
 
 .icon-grid-container {
@@ -454,7 +501,7 @@ nav a[aria-current="page"]::after {
 /* Videos Section */
 .videos-section {
   padding: 80px 20px;
-  background: var(--tp-white);
+  background: var(--tp-off);
 }
 
 .videos-grid {
@@ -898,18 +945,21 @@ nav a[aria-current="page"]::after {
 
 .virtual-tour-link {
   display: inline-block;
-  background: var(--tp-black);
+  background: var(--accent-purple);
   color: var(--tp-white);
   padding: 1rem 2rem;
   border-radius: 8px;
   font-weight: 700;
   transition: all 0.3s;
   margin-top: 2rem;
+  border: 2px solid var(--accent-purple);
 }
 
 .virtual-tour-link:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
+  background: var(--tp-white);
+  color: var(--accent-purple);
 }
 
 /* Lifestyle Gallery */
@@ -1375,19 +1425,22 @@ footer {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: var(--accent-red);
+  background: var(--accent-purple);
   color: var(--tp-white);
   padding: 14px 24px;
   border-radius: 50px;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(230,0,18,0.3);
+  box-shadow: 0 4px 12px rgba(120,0,150,0.3);
   z-index: 999;
   transition: all 0.3s;
+  border: 2px solid var(--accent-purple);
 }
 
 .floating-apply:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(230,0,18,0.4);
+  box-shadow: 0 6px 20px rgba(120,0,150,0.4);
+  background: var(--tp-white);
+  color: var(--accent-purple);
 }
 
 /* Responsive */
@@ -1425,7 +1478,8 @@ footer {
   .city-cards,
   .testimonial-cards,
   .application-grid,
-  .contact-grid {
+  .contact-grid,
+  .about-content {
     grid-template-columns: 1fr;
   }
   
@@ -1499,7 +1553,7 @@ footer {
         コストを抑えた快適な暮らし。そんな "ちょうどいい" 海外生活、マレーシアで始めませんか？
       </p>
       <div class="hero-cta">
-        <a href="open-jobs.html" class="btn btn-primary">求人を見る</a>
+        <a href="open-jobs.html" class="btn btn-accent">求人を見る</a>
         <a href="relocation-visa.html" class="btn btn-secondary">移住サポートを見る</a>
       </div>
       <div class="hero-stats">
@@ -1520,22 +1574,27 @@ footer {
   </section>
 
   <!-- About TP Section -->
-  <section class="priority-menu">
+  <section class="about-section">
     <div class="container">
       <h2 class="section-title">TPマレーシア、タイ求人情報サイトへようこそ</h2>
       <p class="section-subtitle">あなたの次のキャリアがここから始まります！</p>
-      <div style="max-width: 900px; margin: 0 auto; text-align: center; line-height: 1.8; color: var(--tp-gray-dark); margin-bottom: 3rem;">
-        <p>TPは1978年にフランス パリにて設立されたBPO（ビジネスプロセスアウトソーシング）企業です。TP（テレパフォーマンス）は、世界100カ国以上・50万人以上の従業員を擁する、グローバルなビジネスサービスのリーダー企業です。最先端のテクノロジーと優れた人材を融合し、世界中の有名ブランドに最高のカスタマーエクスペリエンスを提供しています。</p>
-        <p style="margin-top: 1rem;">現在、日本語スピーカーを対象に、タイおよびマレーシアにて積極的な採用を行っております。新卒の方から経験豊富なプロフェッショナルまで、皆さまの語学力と個性が活かせる、多文化で働きやすい職場をご用意しています。マレーシアとタイを合わせて日本人スタッフが多数が在籍し、現在も増加中です。</p>
-        <div class="badge" style="margin-top: 2rem; display: inline-block;">
-          🏆 Great Place to Work® 認定企業
+      <div class="about-content">
+        <div class="about-text">
+          <p>TPは1978年にフランス パリにて設立されたBPO（ビジネスプロセスアウトソーシング）企業です。TP（テレパフォーマンス）は、世界100カ国以上・50万人以上の従業員を擁する、グローバルなビジネスサービスのリーダー企業です。最先端のテクノロジーと優れた人材を融合し、世界中の有名ブランドに最高のカスタマーエクスペリエンスを提供しています。</p>
+          <p>現在、日本語スピーカーを対象に、タイおよびマレーシアにて積極的な採用を行っております。新卒の方から経験豊富なプロフェッショナルまで、皆さまの語学力と個性が活かせる、多文化で働きやすい職場をご用意しています。マレーシアとタイを合わせて日本人スタッフが多数が在籍し、現在も増加中です。</p>
+          <div class="badge" style="margin-top: 2rem; display: inline-block;">
+            🏆 Great Place to Work® 認定企業
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="photos/GBS.jpeg" alt="TPオフィス">
         </div>
       </div>
     </div>
   </section>
 
   <!-- Priority Menu Section -->
-  <section class="priority-menu" style="background: var(--tp-off);">
+  <section class="priority-menu">
     <div class="container">
       <h2 class="section-title">優先メニュー</h2>
       <p class="section-subtitle">あなたが知りたい情報へ、すぐにアクセス</p>
@@ -1945,7 +2004,7 @@ footer {
             <li>Submitで完了（確認メールが届きます）</li>
           </ol>
           <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-            <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener" class="btn btn-primary">ご応募はこちら</a>
+            <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener" class="btn btn-accent">ご応募はこちら</a>
             <a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener" class="btn btn-ghost">カジュアル面談</a>
           </div>
         </div>
@@ -2055,19 +2114,19 @@ footer {
           <div class="lifestyle-caption">プール・ジム付き生活</div>
         </div>
         <div class="lifestyle-item">
-          <div style="background: var(--tp-off); height: 100%; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🏃</div>
+          <img src="photos/KL%201.jpg" alt="朝のランニング">
           <div class="lifestyle-caption">朝のランニング</div>
         </div>
         <div class="lifestyle-item">
-          <div style="background: var(--tp-off); height: 100%; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🧘</div>
+          <img src="photos/Bangkok%202.jpg" alt="ヨガでリフレッシュ">
           <div class="lifestyle-caption">ヨガでリフレッシュ</div>
         </div>
         <div class="lifestyle-item">
-          <div style="background: var(--tp-off); height: 100%; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🏝️</div>
+          <img src="photos/Penang%201.jpg" alt="週末アイランドホッピング">
           <div class="lifestyle-caption">週末アイランドホッピング</div>
         </div>
         <div class="lifestyle-item">
-          <div style="background: var(--tp-off); height: 100%; display: flex; align-items: center; justify-content: center; font-size: 3rem;">✈️</div>
+          <img src="photos/G%20TOWER.jpg" alt="近隣諸国へ週末旅行">
           <div class="lifestyle-caption">近隣諸国へ週末旅行</div>
         </div>
       </div>
@@ -2095,7 +2154,7 @@ footer {
           <div class="testimonial-author">
             <img src="photos/Joseph%20on%20vacation.jpg" alt="社員" class="author-img">
             <div class="author-info">
-              <strong>社員A</strong>
+              <strong>Text 055</strong>
               <span>カスタマーサポート・30代男性</span>
             </div>
           </div>
@@ -2105,7 +2164,7 @@ footer {
           <div class="testimonial-author">
             <img src="photos/Maho%20in%20front%20ofKLCC.jpg" alt="社員" class="author-img">
             <div class="author-info">
-              <strong>社員B</strong>
+              <strong>Text 056</strong>
               <span>元営業職・30代</span>
             </div>
           </div>
@@ -2139,13 +2198,13 @@ footer {
           <p class="ta-member-desc">キャリア相談、お気軽にどうぞ。</p>
         </div>
         <div class="ta-member">
-          <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--tp-off); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; border: 3px solid var(--tp-light);">👩</div>
+          <img src="photos/Reception%20(2).png" alt="Koyori" class="ta-member-img">
           <h3 class="ta-member-name">Koyori</h3>
           <p class="ta-member-role">Coordinator</p>
           <p class="ta-member-desc">渡航手続きや現地生活もフォローします。</p>
         </div>
         <div class="ta-member">
-          <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--tp-off); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; border: 3px solid var(--tp-light);">👨</div>
+          <img src="photos/GBS.jpeg" alt="Maya" class="ta-member-img">
           <h3 class="ta-member-name">Maya</h3>
           <p class="ta-member-role">TA | Japan Market</p>
           <p class="ta-member-desc">ご希望のプロジェクトを一緒に探します。</p>
@@ -2246,139 +2305,4 @@ footer {
             <textarea id="message" placeholder="気になる求人、移住、英語レベル、入社時期など" required></textarea>
           </div>
           <div class="form-buttons">
-            <button type="submit" class="btn btn-primary">送信</button>
-            <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener" class="btn btn-ghost">応募ページを開く</a>
-          </div>
-        </form>
-        <aside class="contact-info">
-          <h3>すぐに確認したい方へ</h3>
-          <ul class="contact-links">
-            <li><a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener">カジュアル面談の予約フォーム</a></li>
-            <li><a href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd" target="_blank" rel="noopener">LINE公式アカウント</a></li>
-            <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener">現在の募集を確認</a></li>
-          </ul>
-          <div class="badge" style="margin-top: 1.5rem;">💡 入力は日本語でOKです</div>
-        </aside>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="footer-content">
-    <div class="footer-section">
-      <h3>TELEPERFORMANCE</h3>
-      <p style="opacity: 0.8; line-height: 1.8;">テレパフォーマンスは、日本語スピーカーの<br>
-      海外キャリアを就労ビザと移住サポートで伴走します。<br>
-      Great Place to Work® 認定企業</p>
-      <div class="badges">
-        <img src="photos/TPLogo11.png" alt="TP Logo">
-        <img src="photos/great%20place%20to%20work.png" alt="Great Place to Work">
-        <img src="photos/LV.png" alt="LV Award" style="height: 35px;">
-      </div>
-    </div>
-    <div class="footer-section">
-      <h3>会社情報</h3>
-      <ul>
-        <li><a href="about-tp.html">会社紹介</a></li>
-        <li><a href="ta-team.html">採用チーム</a></li>
-        <li><a href="culture-and-events.html">企業文化</a></li>
-        <li><a href="office-environment.html">オフィス環境</a></li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <h3>求人・キャリア</h3>
-      <ul>
-        <li><a href="open-jobs.html">求人一覧</a></li>
-        <li><a href="salary-and-benefits.html">給与・福利厚生</a></li>
-        <li><a href="career-growth.html">キャリア成長</a></li>
-        <li><a href="interview-process.html">面接プロセス</a></li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <h3>生活情報</h3>
-      <ul>
-        <li><a href="cost-of-living.html">生活コスト</a></li>
-        <li><a href="daily-life-malaysia.html">マレーシアの暮らし</a></li>
-        <li><a href="area-around-office.html">オフィス周辺</a></li>
-        <li><a href="blog.html">ブログ</a></li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <h3>サポート</h3>
-      <ul>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="casual-interview.html">カジュアル面談</a></li>
-        <li><a href="relocation-visa.html">移住・ビザ</a></li>
-        <li><a href="why-malaysia-thailand.html">勤務先都市</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© <span id="year"></span> Teleperformance. All rights reserved. 
-    <a href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd" target="_blank" rel="noopener">LINE公式</a> | 
-    <a href="https://careerseng-teleperformance.icims.com/" target="_blank" rel="noopener">External RAF</a> |
-    <a href="testimonials.html">社員インタビュー</a></p>
-  </div>
-</footer>
-
-<a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener" class="floating-apply">ご応募はこちら →</a>
-
-<script>
-// Set current year
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// FAQ Accordion
-document.querySelectorAll('.faq-question').forEach(question => {
-  question.addEventListener('click', () => {
-    const item = question.parentElement;
-    item.classList.toggle('active');
-    
-    // Close other items
-    document.querySelectorAll('.faq-item').forEach(otherItem => {
-      if (otherItem !== item) {
-        otherItem.classList.remove('active');
-      }
-    });
-  });
-});
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  });
-});
-
-// Intersection Observer for animations
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, observerOptions);
-
-// Observe elements with animation
-document.querySelectorAll('.card, .reason, .city-card, .benefit-item, .testimonial, .ta-member, .office-card, .lifestyle-item').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  observer.observe(el);
-});
-</script>
-</body>
-</html>
+            <button type="submit" class="btn btn-accent">送信
