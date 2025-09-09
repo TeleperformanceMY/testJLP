@@ -1,588 +1,1786 @@
+<!-- FILENAME: index.html -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>TP Japan - 暮らすように、海外で働く。| マレーシア・タイ日本語採用</title>
-  <meta name="description" content="テレパフォーマンスマレーシア・タイの日本語スピーカー採用サイト。多国籍な環境で、日本語を活かせる仕事。移住サポート完備。">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>暮らすように、海外で働く。マレーシア・タイ求人 | TP Japan</title>
+<meta name="description" content="あなたの新しいキャリアの舞台に、マレーシアという選択を。多国籍な環境と、日本語を活かせる仕事。コストを抑えた快適な暮らし。そんな ちょうどいい 海外生活、マレーシアで始めませんか？">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="暮らすように、海外で働く。マレーシア・タイ求人 | TP Japan">
+<meta property="og:description" content="あなたの新しいキャリアの舞台に、マレーシアという選択を。多国籍な環境と、日本語を活かせる仕事。">
+<meta property="og:image" content="photos/TPLogo11.png">
+<link rel="icon" href="photos/TPLogo11.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --tp-black: #000000;
+  --tp-dark: #1a1a1a;
+  --tp-charcoal: #2d2d2d;
+  --tp-gray-dark: #4a4a4a;
+  --tp-gray: #666666;
+  --tp-gray-light: #999999;
+  --tp-silver: #cccccc;
+  --tp-light: #e5e5e5;
+  --tp-off: #f5f5f5;
+  --tp-white: #ffffff;
+  --accent-red: #e60012;
+  --accent-blue: #0047AB;
+  --max: 1200px;
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 16px rgba(0,0,0,0.16);
+  --shadow-xl: 0 16px 32px rgba(0,0,0,0.20);
+}
 
-  <!-- SEO / Social -->
-  <link rel="canonical" href="https://example.com/">
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
-  <meta name="theme-color" content="#000000">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="ja_JP">
-  <meta property="og:title" content="TP Japan - 暮らすように、海外で働く。| マレーシア・タイ日本語採用">
-  <meta property="og:description" content="テレパフォーマンスマレーシア・タイの日本語スピーカー採用サイト。多国籍な環境で、日本語を活かせる仕事。移住サポート完備。">
-  <meta property="og:image" content="photos/TPLogo11.png">
-  <meta property="og:url" content="https://example.com/">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="photos/TPLogo11.png" type="image/png">
-  <link rel="apple-touch-icon" href="photos/TPLogo11.png">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Zen+Maru+Gothic:wght@300;400;500;700&display=swap" rel="stylesheet">
+html {
+  scroll-behavior: smooth;
+}
 
-  <style>
-    :root{
-      /* Brand palette */
-      --tp-black:#000; --tp-dark:#1a1a1a; --tp-charcoal:#2d2d2d; --tp-gray-dark:#4a4a4a; --tp-gray:#666;
-      --tp-gray-light:#999; --tp-silver:#ccc; --tp-light:#e5e5e5; --tp-off-white:#f5f5f5; --tp-white:#fff;
+body {
+  font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--tp-dark);
+  line-height: 1.8;
+  background: var(--tp-white);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "palt" 1;
+}
 
-      /* Accent (minimal) */
-      --accent-red:#e60012; --accent-blue:#0047AB;
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-      /* Typography */
-      --font-primary:'Noto Sans JP',-apple-system,BlinkMacSystemFont,sans-serif;
-      --font-secondary:'Zen Maru Gothic',sans-serif;
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--tp-black);
+  color: var(--tp-white);
+  padding: 8px;
+  z-index: 100;
+}
 
-      /* Layout */
-      --maxw:1400px; --gutter:2rem;
+.skip-link:focus {
+  top: 0;
+}
 
-      /* Shadows */
-      --shadow-xs:0 1px 2px rgba(0,0,0,.05);
-      --shadow-sm:0 2px 4px rgba(0,0,0,.08);
-      --shadow-md:0 4px 8px rgba(0,0,0,.12);
-      --shadow-lg:0 8px 16px rgba(0,0,0,.16);
-      --shadow-xl:0 16px 32px rgba(0,0,0,.20);
+/* Japanese Pattern Background */
+.pattern-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.02;
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 50px, var(--tp-black) 50px, var(--tp-black) 51px),
+    repeating-linear-gradient(90deg, transparent, transparent 50px, var(--tp-black) 50px, var(--tp-black) 51px);
+  pointer-events: none;
+  z-index: 0;
+}
 
-      /* Motion */
-      --ease:cubic-bezier(.2,.65,.3,1);
-    }
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:var(--font-primary);
-      color:var(--tp-dark);
-      background:var(--tp-white);
-      line-height:1.8;
-      font-feature-settings:"palt" 1;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
-    }
-    .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    .skip-link{
-      position:fixed;top:.5rem;left:.5rem;z-index:2000;
-      background:var(--tp-black);color:#fff;padding:.5rem .75rem;
-      transform:translateY(-200%);transition:transform .2s var(--ease);
-    }
-    .skip-link:focus{transform:translateY(0)}
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.95);
+  border-bottom: 1px solid var(--tp-light);
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-    /* Background motif */
-    .japanese-pattern{position:fixed;inset:0;opacity:.03;pointer-events:none;z-index:0;
-      background-image:
-        repeating-linear-gradient(0deg,transparent,transparent 50px,var(--tp-black) 50px,var(--tp-black) 51px),
-        repeating-linear-gradient(90deg,transparent,transparent 50px,var(--tp-black) 50px,var(--tp-black) 51px);
-    }
+.header-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1rem 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    /* Container, grid, cards shared (for added sections) */
-    .container{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
-    .section-head{text-align:center;margin:0 auto 3rem;max-width:940px}
-    .section-head .eyemark{display:inline-block;font-size:.85rem;color:var(--tp-gray);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.25rem}
-    .h2{font-size:clamp(2rem,5vw,3rem);font-weight:900;color:var(--tp-black);letter-spacing:-.02em;margin:0 0 .5rem}
-    .h2-sub{color:var(--tp-gray);font-size:1.05rem}
-    .grid{display:grid;gap:1.25rem}
-    .cols-4{grid-template-columns:repeat(4,1fr)}
-    .cols-3{grid-template-columns:repeat(3,1fr)}
-    .cols-2{grid-template-columns:repeat(2,1fr)}
-    .cols-1-sm{}
-    @media (max-width:1024px){.cols-4{grid-template-columns:repeat(2,1fr)}.cols-3{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:768px){.cols-2,.cols-3,.cols-4{grid-template-columns:1fr}}
-    .card{border:1px solid var(--tp-light);background:#fff;border-radius:10px;padding:1.25rem;box-shadow:0 0 0 rgba(0,0,0,0);transition:transform .2s var(--ease),box-shadow .2s var(--ease),border-color .2s var(--ease)}
-    .card.lift:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--tp-black)}
-    .u-mt0{margin-top:0}.u-mt12{margin-top:.75rem}.u-mt16{margin-top:1rem}
-    .subtle{color:var(--tp-gray-dark)}
-    .badge{display:inline-block;font-size:.8rem;background:var(--tp-off-white);border:1px solid var(--tp-light);border-radius:999px;padding:.25rem .6rem;color:var(--tp-gray-dark)}
-    .btn{padding:1rem 2.5rem;border:2px solid var(--tp-black);text-decoration:none;font-weight:700;display:inline-block;letter-spacing:.02em;transition:all .25s var(--ease)}
-    .btn:focus-visible{outline:3px solid rgba(0,0,0,.35);outline-offset:3px}
-    .btn.primary{background:var(--tp-black);color:#fff}
-    .btn.primary:hover{background:#fff;color:var(--tp-black)}
-    .btn.ghost{background:#fff;color:var(--tp-black)}
-    .btn.ghost:hover{background:var(--tp-black);color:#fff}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+}
 
-    /* Header (preserved design) */
-    header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--tp-light)}
-    .header-container{max-width:var(--maxw);margin:0 auto;padding:1.5rem var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:1rem}
-    .logo-section{display:flex;align-items:center;gap:1rem}
-    .logo{width:50px;height:50px;background:var(--tp-black);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.2rem;letter-spacing:-1px;border:2px solid var(--tp-black)}
-    .brand-mark{display:inline-flex;align-items:center;gap:.75rem}
-    .brand-mark img{width:36px;height:36px;object-fit:contain}
-    .logo-text{font-weight:700;font-size:1.3rem;color:var(--tp-black);letter-spacing:-.5px}
-    .logo-sub{font-size:.75rem;color:var(--tp-gray);font-weight:400;letter-spacing:.5px}
-    nav{display:flex;gap:2.5rem;align-items:center}
-    nav a{color:var(--tp-dark);text-decoration:none;font-weight:500;font-size:.95rem;position:relative;transition:all .3s;letter-spacing:.02em;outline-offset:4px}
-    nav a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:2px;background:var(--tp-black);transition:width .3s}
-    nav a:hover::after{width:100%}
-    nav a:focus-visible{box-shadow:0 0 0 3px rgba(0,0,0,.25);border-radius:4px}
-    .apply-btn{background:var(--tp-black);color:#fff!important;padding:.8rem 2rem;border:2px solid var(--tp-black);font-weight:700;letter-spacing:.05em}
-    .apply-btn:hover{background:#fff;color:var(--tp-black)!important}
-    .nav-toggle{display:none;width:42px;height:42px;border:2px solid var(--tp-black);background:#fff;align-items:center;justify-content:center}
-    .nav-toggle span,.nav-toggle::before,.nav-toggle::after{content:"";display:block;width:22px;height:2px;background:var(--tp-black);transition:transform .2s var(--ease),opacity .2s var(--ease)}
-    .nav-toggle::before{transform:translateY(-6px)} .nav-toggle::after{transform:translateY(6px)}
-    .nav-toggle[aria-expanded="true"] span{opacity:0}
-    .nav-toggle[aria-expanded="true"]::before{transform:translateY(0) rotate(45deg)}
-    .nav-toggle[aria-expanded="true"]::after{transform:translateY(0) rotate(-45deg)}
-    .nav-drawer{position:fixed;inset:0 0 0 auto;width:82%;max-width:360px;background:#fff;box-shadow:var(--shadow-xl);transform:translateX(102%);transition:transform .25s var(--ease);z-index:1200;padding:1rem 1.25rem 2rem;display:flex;flex-direction:column;gap:.75rem}
-    .nav-drawer.open{transform:translateX(0)}
-    .nav-drawer a{padding:.75rem .25rem;border-bottom:1px solid var(--tp-light)}
-    .nav-scrim{position:fixed;inset:0;background:rgba(0,0,0,.35);opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;z-index:1100}
-    .nav-scrim.open{opacity:1;visibility:visible}
-    :target{scroll-margin-top:96px}
-    @media(max-width:900px){nav{display:none}.nav-toggle{display:inline-flex}}
+.brand img {
+  height: 40px;
+}
 
-    /* Hero (preserved) */
-    .hero{min-height:85vh;display:flex;align-items:center;position:relative;background:linear-gradient(to bottom,#fff 0%,var(--tp-off-white) 100%);overflow:hidden}
-    .hero::before{content:"";position:absolute;top:0;right:-20%;width:60%;height:100%;background:repeating-linear-gradient(90deg,transparent,transparent 100px,var(--tp-light) 100px,var(--tp-light) 101px);transform:skewX(-15deg);opacity:.5}
-    .hero-container{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter);display:grid;grid-template-columns:1.2fr 1fr;gap:4rem;align-items:center;position:relative;z-index:2}
-    .hero-content h1{font-size:clamp(2.5rem,5vw,4.5rem);font-weight:900;color:var(--tp-black);line-height:1.1;margin:0 0 1.5rem;letter-spacing:-.02em}
-    .hero-content h1 .highlight{position:relative;display:inline-block}
-    .hero-content h1 .highlight::after{content:"";position:absolute;left:0;right:0;bottom:5px;height:12px;background:var(--tp-light);z-index:-1}
-    .hero-subtitle{font-size:1.2rem;color:var(--tp-gray-dark);margin:0 0 2.5rem;font-weight:400}
-    .hero-ctas{display:flex;gap:1rem;margin:0 0 3rem;flex-wrap:wrap}
-    .hero-stats{display:flex;gap:3rem;flex-wrap:wrap}
-    .stat-item{padding-right:3rem;border-right:1px solid var(--tp-light)}
-    .stat-item:last-child{border-right:none}
-    .stat-number{font-size:2.5rem;font-weight:900;color:var(--tp-black);line-height:1;margin:0 0 .5rem}
-    .stat-label{font-size:.85rem;color:var(--tp-gray);text-transform:uppercase;letter-spacing:.1em}
-    .hero-visual svg{width:100%;height:auto}
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
 
-    /* Reveal on scroll */
-    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
-    .reveal.in{opacity:1;transform:none}
+nav a {
+  transition: opacity 0.3s;
+  font-size: 0.95rem;
+  position: relative;
+}
 
-    /* Priority (preserved) */
-    .priority-section{padding:5rem var(--gutter);background:#fff}
-    .priority-grid{max-width:var(--maxw);margin:0 auto;display:grid;gap:2rem;grid-template-columns:repeat(3,1fr)}
-    .priority-card{background:#fff;border:1px solid var(--tp-light);padding:2.5rem;text-align:center;transition:all .3s;cursor:pointer;position:relative;overflow:hidden;border-radius:8px}
-    .priority-card::before{content:"";position:absolute;top:0;left:0;right:0;height:0;background:var(--tp-black);transition:height .3s;z-index:0}
-    .priority-card:hover::before{height:4px}
-    .priority-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:var(--tp-black)}
-    .priority-card .card-icon{font-size:3rem;margin:0 0 1.5rem;filter:grayscale(100%);opacity:.8}
-    .priority-card .card-title{font-size:1.3rem;font-weight:700;color:var(--tp-black);margin:0 0 .5rem;letter-spacing:-.01em}
-    .priority-card .card-description{color:var(--tp-gray);font-size:.9rem;line-height:1.6}
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--tp-black);
+  transition: width 0.3s ease;
+}
 
-    /* Why section (preserved) */
-    .why-section{padding:5rem var(--gutter);background:var(--tp-off-white)}
-    .why-grid{max-width:var(--maxw);margin:0 auto;display:grid;gap:3rem;grid-template-columns:repeat(2,1fr)}
-    .why-card{display:flex;gap:2rem;padding:2rem;background:#fff;border-left:4px solid var(--tp-black);transition:all .3s;border-radius:8px}
-    .why-card:hover{box-shadow:var(--shadow-lg);transform:translateX(5px)}
-    .why-number{font-size:3rem;font-weight:900;color:var(--tp-light);line-height:1;min-width:60px}
-    .why-content h3{font-size:1.5rem;font-weight:700;color:var(--tp-black);margin:0 0 1rem}
-    .why-content p{color:var(--tp-gray-dark)}
+nav a:hover::after {
+  width: 100%;
+}
 
-    /* Cities (preserved) */
-    .cities-section{padding:5rem var(--gutter);background:#fff}
-    .cities-grid{max-width:var(--maxw);margin:0 auto;display:grid;gap:2rem;grid-template-columns:repeat(3,1fr)}
-    .city-card{background:#fff;border:1px solid var(--tp-light);overflow:hidden;transition:all .3s;cursor:pointer;border-radius:10px}
-    .city-card:hover{box-shadow:var(--shadow-xl);transform:translateY(-5px);border-color:var(--tp-black)}
-    .city-image{width:100%;height:200px;background:var(--tp-off-white);display:grid;place-items:center;font-size:4rem;position:relative;overflow:hidden}
-    .city-image::after{content:"";position:absolute;left:0;right:0;bottom:0;height:50%;background:linear-gradient(to top,rgba(0,0,0,.3),transparent)}
-    .city-content{padding:2rem}
-    .city-name{font-size:1.8rem;font-weight:700;color:var(--tp-black);margin:0 0 .5rem}
-    .city-country{color:var(--tp-gray);font-size:.9rem;text-transform:uppercase;letter-spacing:.1em;margin:0 0 1rem}
-    .city-features{list-style:none;padding:0}
-    .city-features li{padding:.5rem 0;border-bottom:1px solid var(--tp-light);color:var(--tp-gray-dark);font-size:.9rem;position:relative;padding-left:1.5rem}
-    .city-features li:last-child{border-bottom:none}
-    .city-features li::before{content:"◆";position:absolute;left:0;color:var(--tp-gray)}
+nav a[aria-current="page"] {
+  font-weight: 600;
+}
 
-    /* Benefits (preserved) */
-    .benefits-section{padding:5rem var(--gutter);background:var(--tp-black);color:#fff}
-    .benefits-grid{max-width:var(--maxw);margin:0 auto;display:grid;gap:3rem;grid-template-columns:repeat(3,1fr)}
-    .benefit-item{text-align:center;padding:2rem;border:1px solid var(--tp-charcoal);background:rgba(255,255,255,.02);transition:all .3s;border-radius:10px}
-    .benefit-item:hover{background:rgba(255,255,255,.08);border-color:var(--tp-gray);transform:translateY(-5px)}
-    .benefit-icon{font-size:3rem;margin:0 0 1rem;opacity:.9}
-    .benefit-title{font-size:1.2rem;font-weight:700;margin:0 0 .5rem}
-    .benefit-desc{color:var(--tp-silver);font-size:.9rem}
+nav a[aria-current="page"]::after {
+  width: 100%;
+}
 
-    /* New: Secondary icon gallery */
-    .icon-grid.secondary{padding:5rem var(--gutter);background:#fff}
-    .icon-card{display:flex;align-items:center;gap:1rem;padding:1rem;border:1px solid var(--tp-light);border-radius:10px;background:#fff;text-decoration:none;color:inherit;transition:transform .2s var(--ease),box-shadow .2s var(--ease),border-color .2s var(--ease)}
-    .icon-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--tp-black)}
-    .icon-card .icon{font-size:1.8rem;line-height:1}
-    .icon-card .title{font-weight:700;color:var(--tp-black)}
-    .icon-card .desc{color:var(--tp-gray-dark);font-size:.95rem;display:block}
+.apply-btn {
+  background: var(--tp-black);
+  color: var(--tp-white);
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  border: 2px solid var(--tp-black);
+  transition: all 0.3s;
+}
 
-    /* New: Videos grid */
-    #videos{padding:5rem var(--gutter);background:var(--tp-off-white)}
-    .section-box{border:1px solid var(--tp-light);border-radius:12px;background:#fff;padding:2rem}
-    .videos-grid{display:grid;gap:1rem;grid-template-columns:repeat(3,1fr)}
-    .video-embed{position:relative;padding-top:56.25%;border:1px solid var(--tp-light);border-radius:10px;overflow:hidden;background:#000}
-    .video-embed iframe{position:absolute;inset:0;width:100%;height:100%}
+.apply-btn:hover {
+  background: var(--tp-white);
+  color: var(--tp-black);
+}
 
-    /* New: Process (short steps) */
-    .process-short{max-width:var(--maxw);margin:0 auto;display:grid;gap:1rem;grid-template-columns:repeat(5,1fr)}
-    .process-step{border:1px solid var(--tp-light);border-radius:10px;background:#fff;padding:1rem}
-    .process-step strong{display:block;margin:0 0 .25rem}
+.apply-btn::after {
+  display: none;
+}
 
-    /* New: Apply + locations */
-    #apply{padding:5rem var(--gutter);background:#fff}
-    .map-wrap{max-width:var(--maxw);margin:0 auto 1.5rem;border:1px solid var(--tp-light);border-radius:12px;overflow:hidden}
-    .map-wrap img{display:block;width:100%;height:auto}
+/* Hero */
+.hero {
+  min-height: 85vh;
+  background: linear-gradient(135deg, var(--tp-white) 0%, var(--tp-off) 100%);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
 
-    /* New: Offices */
-    #offices{padding:5rem var(--gutter);background:var(--tp-off-white)}
-    .office-grid{max-width:var(--maxw);margin:0 auto;display:grid;gap:1.25rem;grid-template-columns:repeat(3,1fr)}
-    .office-card{border:1px solid var(--tp-light);border-radius:10px;background:#fff;overflow:hidden}
-    .office-media{height:180px;background:#f1f1f1;display:grid;place-items:center;position:relative}
-    .office-media img{width:100%;height:100%;object-fit:cover}
-    .office-body{padding:1rem}
-    .more-link{display:inline-block;margin-top:.5rem;text-decoration:none;border-bottom:1px solid var(--tp-black);color:var(--tp-black)}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  width: 40%;
+  height: 80%;
+  background: url('photos/world%20map%20locations.png') center/contain no-repeat;
+  opacity: 0.1;
+  transform: translateY(-50%);
+}
 
-    /* New: Lifestyle gallery */
-    #lifestyle{padding:5rem var(--gutter);background:#fff}
-    .gallery{display:grid;gap:1rem;grid-template-columns:repeat(4,1fr)}
-    .gallery figure{margin:0;border:1px solid var(--tp-light);border-radius:10px;overflow:hidden;background:#fff}
-    .gallery img{display:block;width:100%;height:180px;object-fit:cover}
-    .gallery figcaption{padding:.5rem .75rem;color:var(--tp-gray);font-size:.9rem}
+.hero-container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 4rem 20px;
+  position: relative;
+  z-index: 2;
+}
 
-    /* New: Voices (testimonials) */
-    #voices{padding:5rem var(--gutter);background:var(--tp-off-white)}
-    .voice-card{border:1px solid var(--tp-light);border-radius:12px;background:#fff;overflow:hidden;display:flex;flex-direction:column}
-    .voice-head{display:flex;align-items:center;gap:.75rem;padding:1rem;border-bottom:1px solid var(--tp-light)}
-    .avatar{width:52px;height:52px;border-radius:50%;object-fit:cover;border:1px solid var(--tp-light);background:#fafafa}
-    .voice-body{padding:1rem;color:var(--tp-gray-dark)}
-    .voice-role{font-size:.9rem;color:var(--tp-gray)}
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  color: var(--tp-black);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-family: 'Zen Maru Gothic', serif;
+  letter-spacing: -0.02em;
+}
 
-    /* New: TA Team */
-    #ta-team{padding:5rem var(--gutter);background:#fff}
-    .ta-grid{max-width:var(--maxw);margin:0 auto;display:grid;gap:1.25rem;grid-template-columns:repeat(5,1fr)}
-    @media(max-width:1200px){.ta-grid{grid-template-columns:repeat(3,1fr)}}
-    @media(max-width:768px){.ta-grid{grid-template-columns:repeat(2,1fr)}}
-    .ta-card{border:1px solid var(--tp-light);border-radius:12px;background:#fff;overflow:hidden;text-align:center}
-    .ta-photo{width:100%;height:200px;object-fit:cover;background:#f2f2f2;border-bottom:1px solid var(--tp-light)}
-    .ta-name{font-weight:700;margin:.75rem 0 0}
-    .ta-role{color:var(--tp-gray);font-size:.9rem}
-    .ta-note{padding:.5rem 1rem 1rem;color:var(--tp-gray-dark);font-size:.95rem}
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--tp-gray);
+  max-width: 700px;
+  margin-bottom: 2.5rem;
+  line-height: 1.9;
+}
 
-    /* New: Mini FAQ */
-    #mini-faq{padding:5rem var(--gutter);background:var(--tp-off-white)}
-    .faq-box{max-width:900px;margin:0 auto}
-    .faq-box details{border:1px solid var(--tp-light);border-radius:10px;padding:1rem;background:#fff;margin-bottom:.75rem}
-    .faq-box summary{cursor:pointer;font-weight:700}
-    .faq-box p{color:var(--tp-gray-dark);margin-top:.5rem}
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
 
-    /* New: Ask ChatGPT */
-    #ask-chatgpt{padding:5rem var(--gutter);background:#fff}
-    .chatgpt-text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;border:1px solid var(--tp-light);border-radius:10px;padding:1rem;background:#fafafa}
-    #copyPromptBtn{cursor:pointer}
+.btn {
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s;
+  text-align: center;
+  border: 2px solid var(--tp-black);
+  cursor: pointer;
+}
 
-    /* Footer (brand card style) */
-    .site-footer{background:var(--tp-black);color:#fff}
-    .site-footer .container{padding:3rem var(--gutter)}
-    .site-footer--brandcard .f-brandcard{border:1px solid var(--tp-charcoal);background:rgba(255,255,255,.02);padding:1.25rem;border-radius:12px}
-    .f-brandcard__head{display:flex;align-items:center;gap:.75rem;margin-bottom:.5rem}
-    .f-brandcard__mark{width:36px;height:36px;border-radius:8px;background:#fff;color:#000;display:grid;place-items:center;font-weight:900}
-    .f-brandcard__titlewrap .f-brandcard__title{font-weight:800}
-    .f-brandcard__sub{color:var(--tp-silver);font-size:.9rem}
-    .f-badges .pill{display:inline-block;background:#222;border:1px solid #333;border-radius:999px;padding:.25rem .6rem;margin-right:.25rem}
-    .f-quick{margin-top:1.25rem}
-    .f-quick__title{font-weight:800;margin:0 0 .75rem}
-    .f-quick__buttons{display:grid;gap:.5rem;margin:0 0 .75rem}
-    .f-quick__links a{display:inline-block;margin-right:.75rem;color:#ddd;text-decoration:none}
-    .f-quick__links a:hover{color:#fff}
-    .f-copy{margin-top:1rem;color:#bbb}
+.btn-primary {
+  background: var(--tp-black);
+  color: var(--tp-white);
+}
 
-    /* Floating Apply & Back to top */
-    .floating-apply{position:fixed;right:30px;bottom:30px;background:var(--tp-black);color:#fff;border:2px solid var(--tp-black);padding:1rem 2rem;text-decoration:none;font-weight:700;border-radius:999px;box-shadow:var(--shadow-xl);z-index:999;transition:all .25s}
-    .floating-apply:hover{background:#fff;color:var(--tp-black);transform:scale(1.05)}
-    .back-to-top{position:fixed;right:30px;bottom:96px;width:44px;height:44px;border-radius:50%;border:2px solid var(--tp-black);background:#fff;color:var(--tp-black);display:grid;place-items:center;box-shadow:var(--shadow-sm);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(10px);transition:all .2s var(--ease);z-index:998}
-    .back-to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.btn-primary:hover {
+  background: var(--tp-white);
+  color: var(--tp-black);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
-    /* Print / reduced motion */
-    @media print{header,.floating-apply,.back-to-top,.nav-scrim,.nav-drawer{display:none!important}a[href^="http"]::after{content:" (" attr(href) ")";font-size:.85em;color:#555}}
-    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-  </style>
+.btn-secondary {
+  background: var(--tp-white);
+  color: var(--tp-black);
+}
+
+.btn-secondary:hover {
+  background: var(--tp-black);
+  color: var(--tp-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 2px solid var(--tp-black);
+  color: var(--tp-black);
+}
+
+.btn-ghost:hover {
+  background: var(--tp-black);
+  color: var(--tp-white);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  padding-right: 3rem;
+  border-right: 1px solid var(--tp-light);
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--tp-black);
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--tp-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Container */
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section Header */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  color: var(--tp-black);
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--tp-gray);
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+/* Priority Menu */
+.priority-menu {
+  padding: 80px 20px;
+  background: var(--tp-white);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--tp-white);
+  border: 1px solid var(--tp-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--tp-black);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-color: var(--tp-black);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card p {
+  color: var(--tp-gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Icon Grid - Secondary Section */
+.icon-grid {
+  padding: 80px 20px;
+  background: var(--tp-off);
+}
+
+.icon-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.icon-card {
+  background: var(--tp-white);
+  border: 1px solid var(--tp-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.icon-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--tp-black);
+}
+
+.icon-card-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.icon-card-meta {
+  flex: 1;
+}
+
+.icon-card-title {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: var(--tp-black);
+}
+
+.icon-card-desc {
+  font-size: 0.85rem;
+  color: var(--tp-gray);
+}
+
+/* Videos Section */
+.videos-section {
+  padding: 80px 20px;
+  background: var(--tp-white);
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.video-card {
+  background: var(--tp-white);
+  border: 1px solid var(--tp-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.video-card:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-5px);
+}
+
+.video-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  background: var(--tp-off);
+}
+
+.video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-info {
+  padding: 1.5rem;
+}
+
+.video-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--tp-black);
+}
+
+.video-desc {
+  font-size: 0.9rem;
+  color: var(--tp-gray);
+}
+
+/* Reasons */
+.reasons {
+  padding: 80px 20px;
+  background: var(--tp-white);
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.reason {
+  background: var(--tp-white);
+  padding: 2rem;
+  border-left: 4px solid var(--tp-black);
+  transition: all 0.3s;
+}
+
+.reason:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.reason-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--tp-light);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.reason h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--tp-black);
+}
+
+.reason p {
+  color: var(--tp-gray);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Cities */
+.cities {
+  padding: 80px 20px;
+  background: var(--tp-off);
+}
+
+.city-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.city-card {
+  background: var(--tp-white);
+  border: 1px solid var(--tp-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.city-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  border-color: var(--tp-black);
+}
+
+.city-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.city-card-content {
+  padding: 1.5rem;
+}
+
+.city-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.city-country {
+  color: var(--tp-gray);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.city-features {
+  list-style: none;
+  padding: 0;
+}
+
+.city-features li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--tp-light);
+  color: var(--tp-gray);
+  font-size: 0.9rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.city-features li:last-child {
+  border-bottom: none;
+}
+
+.city-features li:before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  color: var(--tp-gray);
+}
+
+.city-card a {
+  color: var(--tp-black);
+  font-weight: 600;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* World Map Section */
+.world-map-section {
+  padding: 80px 20px;
+  background: var(--tp-white);
+  text-align: center;
+}
+
+.world-map-container {
+  max-width: var(--max);
+  margin: 3rem auto 0;
+  position: relative;
+}
+
+.world-map-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Benefits */
+.benefits {
+  padding: 80px 20px;
+  background: var(--tp-black);
+  color: var(--tp-white);
+}
+
+.benefits .section-title {
+  color: var(--tp-white);
+}
+
+.benefits .section-subtitle {
+  color: rgba(255,255,255,0.7);
+}
+
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.02);
+  transition: all 0.3s;
+  border-radius: 8px;
+}
+
+.benefit-item:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.3);
+  transform: translateY(-5px);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.benefit-text h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.benefit-text p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+}
+
+/* Interview Process */
+.interview-process {
+  padding: 80px 20px;
+  background: var(--tp-white);
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: var(--max);
+  margin: 3rem auto 0;
+}
+
+.process-step {
+  text-align: center;
+  position: relative;
+}
+
+.process-step::after {
+  content: '→';
+  position: absolute;
+  top: 50px;
+  right: -30px;
+  font-size: 1.5rem;
+  color: var(--tp-light);
+}
+
+.process-step:last-child::after {
+  display: none;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: var(--tp-black);
+  color: var(--tp-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0 auto 1rem;
+}
+
+.step-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--tp-black);
+}
+
+.step-desc {
+  font-size: 0.9rem;
+  color: var(--tp-gray);
+}
+
+/* Application Section */
+.application-section {
+  padding: 80px 20px;
+  background: var(--tp-off);
+}
+
+.application-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: var(--max);
+  margin: 3rem auto 0;
+}
+
+.application-card {
+  background: var(--tp-white);
+  border: 1px solid var(--tp-light);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.application-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--tp-black);
+}
+
+.application-card ul {
+  padding-left: 1.5rem;
+  color: var(--tp-gray);
+  margin-bottom: 1.5rem;
+}
+
+.application-card li {
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--tp-off);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--tp-gray-dark);
+  border: 1px solid var(--tp-light);
+}
+
+/* Office Environment */
+.office-section {
+  padding: 80px 20px;
+  background: var(--tp-white);
+}
+
+.office-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: var(--max);
+  margin: 3rem auto 0;
+}
+
+.office-card {
+  background: var(--tp-white);
+  border: 1px solid var(--tp-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.office-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.office-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.office-info {
+  padding: 1.5rem;
+}
+
+.office-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--tp-black);
+}
+
+.office-features {
+  list-style: none;
+  padding: 0;
+}
+
+.office-features li {
+  font-size: 0.9rem;
+  color: var(--tp-gray);
+  padding: 0.25rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.office-features li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--tp-gray);
+}
+
+/* Virtual Office Tour */
+.virtual-tour {
+  padding: 80px 20px;
+  background: var(--tp-off);
+}
+
+.virtual-tour-container {
+  max-width: var(--max);
+  margin: 3rem auto 0;
+  text-align: center;
+}
+
+.virtual-tour-link {
+  display: inline-block;
+  background: var(--tp-black);
+  color: var(--tp-white);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: all 0.3s;
+  margin-top: 2rem;
+}
+
+.virtual-tour-link:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Lifestyle Gallery */
+.lifestyle-section {
+  padding: 80px 20px;
+  background: var(--tp-white);
+}
+
+.lifestyle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: var(--max);
+  margin: 3rem auto 0;
+}
+
+.lifestyle-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 250px;
+  background: var(--tp-off);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.lifestyle-item:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-xl);
+}
+
+.lifestyle-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lifestyle-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: var(--tp-white);
+  padding: 1.5rem 1rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 80px 20px;
+  background: var(--tp-off);
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.testimonial {
+  background: var(--tp-white);
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+  border: 1px solid var(--tp-light);
+  transition: all 0.3s;
+}
+
+.testimonial:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+}
+
+.testimonial::before {
+  content: '"';
+  font-size: 4rem;
+  color: var(--tp-light);
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-family: Georgia, serif;
+}
+
+.testimonial-content {
+  margin-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--tp-dark);
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-info strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.author-info span {
+  color: var(--tp-gray);
+  font-size: 0.85rem;
+}
+
+/* TA Team */
+.ta-team {
+  padding: 80px 20px;
+  background: var(--tp-white);
+}
+
+.ta-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: var(--max);
+  margin: 3rem auto 0;
+}
+
+.ta-member {
+  text-align: center;
+  background: var(--tp-white);
+  border: 1px solid var(--tp-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+
+.ta-member:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--tp-black);
+}
+
+.ta-member-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  border: 3px solid var(--tp-light);
+}
+
+.ta-member-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--tp-black);
+}
+
+.ta-member-role {
+  font-size: 0.9rem;
+  color: var(--tp-gray);
+  margin-bottom: 0.5rem;
+}
+
+.ta-member-desc {
+  font-size: 0.85rem;
+  color: var(--tp-gray-dark);
+  line-height: 1.6;
+}
+
+/* FAQ */
+.faq-section {
+  padding: 80px 20px;
+  background: var(--tp-off);
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 3rem auto 0;
+}
+
+.faq-item {
+  background: var(--tp-white);
+  border: 1px solid var(--tp-light);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.faq-question:hover {
+  background: var(--tp-off);
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 1.5rem;
+  color: var(--tp-gray);
+}
+
+.faq-item.active .faq-question::after {
+  content: '−';
+}
+
+.faq-answer {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s, padding 0.3s;
+}
+
+.faq-item.active .faq-answer {
+  padding: 0 1.5rem 1.5rem;
+  max-height: 500px;
+}
+
+.faq-answer p {
+  color: var(--tp-gray-dark);
+  line-height: 1.8;
+}
+
+/* ChatGPT Section */
+.chatgpt-section {
+  padding: 80px 20px;
+  background: var(--tp-white);
+}
+
+.chatgpt-container {
+  max-width: 800px;
+  margin: 3rem auto 0;
+}
+
+.chatgpt-box {
+  background: var(--tp-off);
+  border: 1px solid var(--tp-light);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.chatgpt-prompt {
+  width: 100%;
+  min-height: 200px;
+  padding: 1rem;
+  border: 1px solid var(--tp-light);
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  background: var(--tp-white);
+  resize: vertical;
+}
+
+.chatgpt-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Contact */
+.contact {
+  padding: 80px 20px;
+  background: var(--tp-off);
+  position: relative;
+}
+
+.contact::before {
+  content: 'TP';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20rem;
+  font-weight: 900;
+  color: rgba(0,0,0,0.02);
+  z-index: 0;
+  letter-spacing: -0.1em;
+  pointer-events: none;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  max-width: var(--max);
+  margin: 3rem auto 0;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-form {
+  background: var(--tp-white);
+  border: 1px solid var(--tp-light);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--tp-black);
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--tp-light);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--tp-black);
+  background: var(--tp-off);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  background: var(--tp-white);
+  border: 1px solid var(--tp-light);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.contact-info h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--tp-black);
+}
+
+.contact-links {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-links li {
+  margin-bottom: 1rem;
+}
+
+.contact-links a {
+  color: var(--tp-gray-dark);
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.contact-links a:hover {
+  color: var(--tp-black);
+}
+
+/* Footer */
+footer {
+  background: var(--tp-black);
+  color: var(--tp-white);
+  padding: 60px 20px 20px;
+}
+
+.footer-content {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  font-size: 0.9rem;
+}
+
+.footer-section a:hover {
+  opacity: 1;
+}
+
+.badges {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.badges img {
+  height: 40px;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.footer-bottom a {
+  color: var(--tp-white);
+  text-decoration: underline;
+  margin: 0 0.5rem;
+}
+
+/* Floating Apply */
+.floating-apply {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--accent-red);
+  color: var(--tp-white);
+  padding: 14px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(230,0,18,0.3);
+  z-index: 999;
+  transition: all 0.3s;
+}
+
+.floating-apply:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(230,0,18,0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .hero {
+    min-height: auto;
+    padding: 60px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-stats {
+    justify-content: center;
+  }
+  
+  .stat-item {
+    padding-right: 2rem;
+  }
+  
+  .reasons-grid,
+  .city-cards,
+  .testimonial-cards,
+  .application-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .process-step::after {
+    display: none;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .floating-apply {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    gap: 0.5rem;
+  }
+  
+  .apply-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+</style>
 </head>
 <body>
-  <a href="#main" class="skip-link">メインへスキップ</a>
-  <div class="japanese-pattern" aria-hidden="true"></div>
+<div class="pattern-overlay"></div>
+<a href="#main" class="skip-link">メインへスキップ</a>
 
-  <!-- Header -->
-  <header role="banner">
-    <div class="header-container">
-      <div class="logo-section">
-        <div class="logo" aria-hidden="true">TP</div>
-        <span class="brand-mark" aria-label="Teleperformance Japan">
-          <img src="photos/TPLogo11.png" alt="" loading="lazy" decoding="async">
-          <span>
-            <span class="logo-text">Teleperformance</span><br>
-            <span class="logo-sub">Malaysia · Thailand — 日本語採用</span>
-          </span>
-        </span>
-      </div>
-
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navDrawer" aria-label="メニューを開閉">
-        <span></span>
-      </button>
-
-      <nav aria-label="主要ナビゲーション">
-        <a href="#about">About TP</a>
-        <a href="#jobs">求人情報</a>
-        <a href="#benefits">福利厚生</a>
-        <a href="#relocation">移住・ビザ</a>
-        <a href="#process">面接プロセス</a>
-        <a href="#cities">勤務地</a>
-        <a href="#faq">FAQ</a>
-        <a href="open-jobs.html">Open Jobs</a>
-        <a href="salary-and-benefits.html">Salary & Benefits</a>
-        <a href="relocation-visa.html">Relocation & Visa</a>
-        <a href="interview-process.html">Interview Process</a>
-        <a href="why-malaysia-thailand.html">Why Malaysia & Thailand</a>
-        <a href="about-tp.html">About TP</a>
-        <a href="https://careerseng-tp.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE"
-           class="apply-btn" target="_blank" rel="noopener">ご応募はこちら</a>
-      </nav>
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <img src="photos/TPLogo11.png" alt="Teleperformance">
+      <span>Teleperformance — Japan</span>
     </div>
-    <div class="nav-scrim" id="navScrim" hidden></div>
-    <div class="nav-drawer" id="navDrawer" aria-hidden="true" role="dialog" aria-label="モバイルメニュー">
-      <a href="#about">About TP</a>
-      <a href="#jobs">求人情報</a>
-      <a href="#benefits">福利厚生</a>
-      <a href="#relocation">移住・ビザ</a>
-      <a href="#process">面接プロセス</a>
-      <a href="#cities">勤務地</a>
-      <a href="#faq">FAQ</a>
-      <a href="open-jobs.html">Open Jobs</a>
-      <a href="salary-and-benefits.html">Salary & Benefits</a>
-      <a href="relocation-visa.html">Relocation & Visa</a>
-      <a href="interview-process.html">Interview Process</a>
-      <a href="why-malaysia-thailand.html">Why Malaysia & Thailand</a>
-      <a href="about-tp.html">About TP</a>
-      <a href="https://careerseng-tp.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE"
-         class="apply-btn" target="_blank" rel="noopener">ご応募はこちら</a>
+    <nav>
+      <ul>
+        <li><a href="index.html" aria-current="page">ホーム</a></li>
+        <li><a href="about-tp.html">会社紹介</a></li>
+        <li><a href="open-jobs.html">求人一覧</a></li>
+        <li><a href="salary-and-benefits.html">給与・福利厚生</a></li>
+        <li><a href="relocation-visa.html">移住・ビザ</a></li>
+        <li><a href="interview-process.html">面接</a></li>
+        <li><a href="why-malaysia-thailand.html">勤務先都市</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener" class="apply-btn">応募する</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1>暮らすように、海外で働く。</h1>
+      <p class="hero-subtitle">
+        あなたの新しいキャリアの舞台に、マレーシアという選択を。<br>
+        多国籍な環境と、日本語を活かせる仕事。<br>
+        コストを抑えた快適な暮らし。そんな "ちょうどいい" 海外生活、マレーシアで始めませんか？
+      </p>
+      <div class="hero-cta">
+        <a href="open-jobs.html" class="btn btn-primary">求人を見る</a>
+        <a href="relocation-visa.html" class="btn btn-secondary">移住サポートを見る</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">100+</span>
+          <span class="stat-label">拠点国</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">500K+</span>
+          <span class="stat-label">従業員数</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">7,300+</span>
+          <span class="stat-label">日本人スタッフ</span>
+        </div>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main id="main" tabindex="-1">
+  <!-- About TP Section -->
+  <section class="priority-menu">
+    <div class="container">
+      <h2 class="section-title">TPマレーシア、タイ求人情報サイトへようこそ</h2>
+      <p class="section-subtitle">あなたの次のキャリアがここから始まります！</p>
+      <div style="max-width: 900px; margin: 0 auto; text-align: center; line-height: 1.8; color: var(--tp-gray-dark); margin-bottom: 3rem;">
+        <p>TPは1978年にフランス パリにて設立されたBPO（ビジネスプロセスアウトソーシング）企業です。TP（テレパフォーマンス）は、世界100カ国以上・50万人以上の従業員を擁する、グローバルなビジネスサービスのリーダー企業です。最先端のテクノロジーと優れた人材を融合し、世界中の有名ブランドに最高のカスタマーエクスペリエンスを提供しています。</p>
+        <p style="margin-top: 1rem;">現在、日本語スピーカーを対象に、タイおよびマレーシアにて積極的な採用を行っております。新卒の方から経験豊富なプロフェッショナルまで、皆さまの語学力と個性が活かせる、多文化で働きやすい職場をご用意しています。マレーシアとタイを合わせて日本人スタッフが多数が在籍し、現在も増加中です。</p>
+        <div class="badge" style="margin-top: 2rem; display: inline-block;">
+          🏆 Great Place to Work® 認定企業
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- HERO (preserved) -->
-    <section class="hero" aria-labelledby="heroTitle">
-      <div class="hero-container">
-        <div class="hero-content">
-          <h1 id="heroTitle"><span class="highlight">暮らすように、</span><br>海外で働く。</h1>
-          <p class="hero-subtitle">
-            あなたの新しいキャリアの舞台に、マレーシアという選択を。<br>
-            多国籍な環境と、日本語を活かせる仕事。<br>
-            コストを抑えた快適な暮らし。そんな "ちょうどいい" 海外生活。
-          </p>
-          <div class="hero-ctas">
-            <a href="#jobs" class="btn primary">求人を見る</a>
-            <a href="#relocation" class="btn ghost">移住サポート</a>
+  <!-- Priority Menu Section -->
+  <section class="priority-menu" style="background: var(--tp-off);">
+    <div class="container">
+      <h2 class="section-title">優先メニュー</h2>
+      <p class="section-subtitle">あなたが知りたい情報へ、すぐにアクセス</p>
+      <div class="cards">
+        <a href="about-tp.html" class="card">
+          <img src="photos/GBS.jpeg" alt="TPオフィス">
+          <div class="card-content">
+            <h3>About TP / Teleperformanceとは</h3>
+            <p>世界100カ国以上で展開するグローバル企業</p>
           </div>
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-number">100+</span>
-              <span class="stat-label">拠点国</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">500K+</span>
-              <span class="stat-label">従業員数</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">7,300+</span>
-              <span class="stat-label">日本人スタッフ</span>
-            </div>
+        </a>
+        <a href="open-jobs.html" class="card">
+          <img src="photos/Reception.png" alt="求人情報">
+          <div class="card-content">
+            <h3>求人を見る / Open Jobs</h3>
+            <p>日本語スピーカー向けポジション多数</p>
+          </div>
+        </a>
+        <a href="salary-and-benefits.html" class="card">
+          <img src="photos/Reception%20(1).png" alt="福利厚生">
+          <div class="card-content">
+            <h3>給与・福利厚生 / Salary & Benefits</h3>
+            <p>充実した待遇とサポート体制</p>
+          </div>
+        </a>
+        <a href="relocation-visa.html" class="card">
+          <img src="photos/Condo.jpg" alt="移住サポート">
+          <div class="card-content">
+            <h3>移住・ビザサポート / Relocation & Visa</h3>
+            <p>EP申請から渡航まで完全サポート</p>
+          </div>
+        </a>
+        <a href="interview-process.html" class="card">
+          <img src="photos/Reception%20(2).png" alt="面接プロセス">
+          <div class="card-content">
+            <h3>面接プロセス / Interview Process</h3>
+            <p>すべてオンラインで完結</p>
+          </div>
+        </a>
+        <a href="why-malaysia-thailand.html" class="card">
+          <img src="photos/KL%201.jpg" alt="勤務地">
+          <div class="card-content">
+            <h3>マレーシア・タイの魅力 / Why Malaysia & Thailand</h3>
+            <p>暮らしやすさと成長機会</p>
+          </div>
+        </a>
+        <a href="casual-interview.html" class="card">
+          <img src="photos/Akito%20san.jpg" alt="カジュアル面談">
+          <div class="card-content">
+            <h3>カジュアル面談 / Casual Interview</h3>
+            <p>まずは気軽に相談から</p>
+          </div>
+        </a>
+        <a href="testimonials.html" class="card">
+          <img src="photos/Maho.png" alt="社員の声">
+          <div class="card-content">
+            <h3>社員の声 / Testimonials</h3>
+            <p>実際に働く人のリアルな声</p>
+          </div>
+        </a>
+        <a href="office-environment.html" class="card">
+          <img src="photos/G%20TOWER.jpg" alt="オフィス環境">
+          <div class="card-content">
+            <h3>働く環境 / Office Environment</h3>
+            <p>オフィス&バーチャルツアー</p>
+          </div>
+        </a>
+        <a href="career-growth.html" class="card">
+          <img src="photos/Joseph%20on%20vacation.jpg" alt="キャリア成長">
+          <div class="card-content">
+            <h3>キャリアパス・昇進制度 / Career Growth</h3>
+            <p>明確な成長機会</p>
+          </div>
+        </a>
+        <a href="career-growth.html#language" class="card">
+          <img src="photos/Bangkok%202.jpg" alt="語学研修">
+          <div class="card-content">
+            <h3>言語・トレーニング / Language Bootcamp</h3>
+            <p>GoFluentなど学習支援</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Secondary Icon Grid -->
+  <section class="icon-grid">
+    <div class="container">
+      <h2 class="section-title">生活情報・カルチャー・サポート</h2>
+      <p class="section-subtitle">暮らしに役立つ情報</p>
+      <div class="icon-grid-container">
+        <a href="cost-of-living.html" class="icon-card">
+          <span class="icon-card-icon">💰</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">生活コスト</div>
+            <div class="icon-card-desc">食事・交通・住まい</div>
+          </div>
+        </a>
+        <a href="daily-life-malaysia.html" class="icon-card">
+          <span class="icon-card-icon">🏠</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">現地生活</div>
+            <div class="icon-card-desc">Daily Life in Malaysia</div>
+          </div>
+        </a>
+        <a href="ta-team.html" class="icon-card">
+          <span class="icon-card-icon">🤝</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">採用チーム</div>
+            <div class="icon-card-desc">Meet the TA Team</div>
+          </div>
+        </a>
+        <a href="area-around-office.html" class="icon-card">
+          <span class="icon-card-icon">📍</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">周辺環境</div>
+            <div class="icon-card-desc">オフィス周りの便利情報</div>
+          </div>
+        </a>
+        <a href="blog.html" class="icon-card">
+          <span class="icon-card-icon">📝</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">ブログ・コラム</div>
+            <div class="icon-card-desc">役立つ読み物</div>
+          </div>
+        </a>
+        <a href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd" target="_blank" rel="noopener" class="icon-card">
+          <span class="icon-card-icon">💬</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">LINE公式アカウント</div>
+            <div class="icon-card-desc">最新情報を受け取る</div>
+          </div>
+        </a>
+        <a href="culture-and-events.html" class="icon-card">
+          <span class="icon-card-icon">🎉</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">イベント・カルチャー</div>
+            <div class="icon-card-desc">社内コミュニティ</div>
+          </div>
+        </a>
+        <a href="faq.html" class="icon-card">
+          <span class="icon-card-icon">❓</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">FAQ・よくある質問</div>
+            <div class="icon-card-desc">応募・生活・ビザ</div>
+          </div>
+        </a>
+        <a href="https://careerseng-teleperformance.icims.com/" target="_blank" rel="noopener" class="icon-card">
+          <span class="icon-card-icon">🌐</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">External RAF</div>
+            <div class="icon-card-desc">採用ポータル</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos Section -->
+  <section class="videos-section">
+    <div class="container">
+      <h2 class="section-title">TP を動画で知る</h2>
+      <p class="section-subtitle">オフィス、社員の声、カルチャーをピックアップ</p>
+      <div class="videos-grid">
+        <div class="video-card">
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/I0Uz5WbulNE" title="TP Malaysia Video 1" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">TP: Where Dreams Come True in the APAC Region</h3>
+            <p class="video-desc">アジア太平洋地域でのTPの魅力をご紹介</p>
           </div>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
-            <rect x="50" y="200" width="60" height="180" fill="#000" opacity="0.2"/>
-            <rect x="130" y="150" width="60" height="230" fill="#000" opacity="0.3"/>
-            <rect x="210" y="170" width="60" height="210" fill="#000" opacity="0.2"/>
-            <rect x="290" y="140" width="60" height="240" fill="#000" opacity="0.4"/>
-            <rect x="370" y="180" width="60" height="200" fill="#000" opacity="0.3"/>
-            <circle cx="400" cy="80" r="30" fill="none" stroke="#000" stroke-width="2" opacity="0.3"/>
-            <circle cx="400" cy="80" r="20" fill="#e60012" opacity="0.8"/>
-            <text x="250" y="100" font-family="Noto Sans JP" font-size="24" font-weight="bold" text-anchor="middle" fill="#000" opacity="0.3">
-              KL · Penang · Bangkok
-            </text>
-          </svg>
+        <div class="video-card">
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/aPahVrsApXY" title="TP Malaysia Video 2" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">Elevate Your Career with TP in Malaysia</h3>
+            <p class="video-desc">マレーシアでのキャリアパスと成長機会</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-embed" style="background: var(--tp-off); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--tp-light);">
+            🎬
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">TP Family in Malaysia</h3>
+            <p class="video-desc">A Great Place to Work with and Grow in the APAC Region</p>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- PRIORITY (preserved) -->
-    <section class="priority-section">
-      <div class="section-head">
-        <h2 class="h2">優先メニュー</h2>
-        <p class="h2-sub">あなたが知りたい情報へ、すぐにアクセス</p>
-      </div>
-      <div class="priority-grid">
-        <a class="priority-card" href="#about" aria-label="About TP セクションへ">
-          <span class="card-icon">🏢</span>
-          <div class="card-title">About TP / Teleperformanceとは</div>
-          <div class="card-description">世界100カ国以上で展開するグローバル企業</div>
-        </a>
-        <a class="priority-card" href="#jobs" aria-label="求人を見る セクションへ">
-          <span class="card-icon">💼</span>
-          <div class="card-title">求人を見る / Open Jobs</div>
-          <div class="card-description">日本語スピーカー向けポジション多数</div>
-        </a>
-        <a class="priority-card" href="#benefits" aria-label="給与・福利厚生 セクションへ">
-          <span class="card-icon">💰</span>
-          <div class="card-title">給与・福利厚生 / Salary & Benefits</div>
-          <div class="card-description">充実した待遇とサポート体制</div>
-        </a>
-        <a class="priority-card" href="#relocation" aria-label="移住・ビザサポート セクションへ">
-          <span class="card-icon">✈️</span>
-          <div class="card-title">移住・ビザサポート / Relocation & Visa</div>
-          <div class="card-description">EP申請から渡航まで完全サポート</div>
-        </a>
-        <a class="priority-card" href="#process" aria-label="面接プロセス セクションへ">
-          <span class="card-icon">🎯</span>
-          <div class="card-title">面接プロセス / Interview Process</div>
-          <div class="card-description">すべてオンラインで完結</div>
-        </a>
-        <a class="priority-card" href="#cities" aria-label="マレーシア・タイの魅力 セクションへ">
-          <span class="card-icon">🌏</span>
-          <div class="card-title">マレーシア・タイの魅力 / Why Malaysia</div>
-          <div class="card-description">暮らしやすさと成長機会</div>
-        </a>
-        <a class="priority-card" href="#contact" aria-label="カジュアル面談 セクションへ">
-          <span class="card-icon">☕</span>
-          <div class="card-title">カジュアル面談 / Casual Interview</div>
-          <div class="card-description">まずは気軽に相談から</div>
-        </a>
-        <a class="priority-card" href="#testimonials" aria-label="社員の声 セクションへ">
-          <span class="card-icon">👥</span>
-          <div class="card-title">社員の声 / Testimonials</div>
-          <div class="card-description">実際に働く人のリアルな声</div>
-        </a>
-        <a class="priority-card" href="#office" aria-label="働く環境 セクションへ">
-          <span class="card-icon">🏙️</span>
-          <div class="card-title">働く環境 / Office Environment</div>
-          <div class="card-description">オフィス&バーチャルツアー</div>
-        </a>
-      </div>
-    </section>
-
-    <!-- ABOUT (kept) + small intro using map later -->
-    <section id="about" class="reveal" aria-labelledby="aboutTitle" style="padding:5rem var(--gutter);background:#fff;">
-      <div class="section-head">
-        <h2 id="aboutTitle" class="h2">About TP / Teleperformanceとは</h2>
-        <p class="h2-sub">Text 001</p>
-      </div>
-      <div class="container" style="display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;">
-        <div>
-          <p class="subtle">Text 002</p>
-          <ul class="subtle" style="margin-top:1rem;padding-left:1.25rem">
-            <li>Text 003</li>
-            <li>Text 004</li>
-            <li>Text 005</li>
-          </ul>
+  <!-- TPが選ばれる理由 Section -->
+  <section class="reasons">
+    <div class="container">
+      <h2 class="section-title">TPが選ばれる理由</h2>
+      <p class="section-subtitle">グローバル環境で、自分をレベルアップ</p>
+      <div class="reasons-grid">
+        <div class="reason">
+          <div class="reason-number">01</div>
+          <h3>グローバルな環境で、自分をレベルアップ！</h3>
+          <p>TP Malaysia・Thailandは、世界中から集まったスタッフが活躍する国際的なBPO企業。まるで"毎日がプチ留学"のような環境で、自然と英語力や異文化理解力がアップします。「海外で働く」という体験を通じて、あなたの視野とキャリアは確実に広がります！</p>
         </div>
-        <figure style="margin:0;align-self:center">
-          <img src="photos/world%20map%20locations.png" alt="TP 世界拠点マップ" loading="lazy" decoding="async" style="width:100%;height:auto;border:1px solid var(--tp-light);border-radius:10px">
-          <figcaption class="subtle" style="margin-top:.5rem">Text 006</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- WHY (preserved) -->
-    <section class="why-section reveal" aria-labelledby="whyTitle">
-      <div class="section-head">
-        <h2 id="whyTitle" class="h2">TPが選ばれる理由</h2>
-        <p class="h2-sub">グローバル環境で、自分をレベルアップ</p>
-      </div>
-      <div class="why-grid">
-        <article class="why-card"><div class="why-number">01</div><div class="why-content"><h3>グローバルな環境</h3><p>Text 007</p></div></article>
-        <article class="why-card"><div class="why-number">02</div><div class="why-content"><h3>日本語ポジション豊富</h3><p>Text 008</p></div></article>
-        <article class="why-card"><div class="why-number">03</div><div class="why-content"><h3>日本人サポート充実</h3><p>Text 009</p></div></article>
-        <article class="why-card"><div class="why-number">04</div><div class="why-content"><h3>実力次第でキャリアアップ</h3><p>Text 010</p></div></article>
-      </div>
-    </section>
-
-    <!-- =========================================================
-         Secondary icon gallery / 生活情報など（7 tiles）
-    ========================================================== -->
-    <section class="icon-grid secondary">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="h2">生活情報・カルチャー・サポート</h2>
-          <p class="h2-sub">暮らしに役立つ情報</p>
+        <div class="reason">
+          <div class="reason-number">02</div>
+          <h3>日本語スピーカー向けのポジションが豊富！</h3>
+          <p>当社では、日本語を活かせるカスタマーサポートや営業職などのポジションを多数ご用意。「英語に少し自信がない…」という方も、日本語中心の業務から安心して始められます。段階的に英語に触れながら、無理なくスキルを伸ばせます。</p>
         </div>
-
-        <div class="grid cols-4 cols-2-md cols-1-sm">
-          <a class="icon-card" href="cost-of-living.html">
-            <span class="icon">💰</span>
-            <span class="meta">
-              <span class="title">生活コスト</span>
-              <span class="desc">食事・交通・住まい</span>
-            </span>
-          </a>
-          <a class="icon-card" href="ta-team.html">
-            <span class="icon">🤝</span>
-            <span class="meta">
-              <span class="title">採用チーム</span>
-              <span class="desc">Meet the TA Team</span>
-            </span>
-          </a>
-          <a class="icon-card" href="area-around-office.html">
-            <span class="icon">📍</span>
-            <span class="meta">
-              <span class="title">周辺環境</span>
-              <span class="desc">オフィス周りの便利情報</span>
-            </span>
-          </a>
-          <a class="icon-card" href="blog.html">
-            <span class="icon">📝</span>
-            <span class="meta">
-              <span class="title">ブログ・コラム</span>
-              <span class="desc">役立つ読み物</span>
-            </span>
-          </a>
-          <a class="icon-card" target="_blank" href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd">
-            <span class="icon">💬</span>
-            <span class="meta">
-              <span class="title">LINE公式アカウント</span>
-              <span class="desc">最新情報を受け取る</span>
-            </span>
-          </a>
-          <a class="icon-card" href="culture-and-events.html">
-            <span class="icon">🎉</span>
-            <span class="meta">
-              <span class="title">イベント・カルチャー</span>
-              <span class="desc">社内コミュニティ</span>
-            </span>
-          </a>
-          <a class="icon-card" href="faq.html">
-            <span class="icon">❓</span>
-            <span class="meta">
-              <span class="title">FAQ・よくある質問</span>
-              <span class="desc">応募・生活・ビザ</span>
-            </span>
-          </a>
+        <div class="reason">
+          <div class="reason-number">03</div>
+          <h3>日本人サポートも充実！初めての海外でも安心</h3>
+          <p>多数の日本人スタッフが在籍しているため、「困ったときにすぐ相談できる環境」が整っております。生活・お仕事の両面で安心したサポート体制がございます。</p>
+        </div>
+        <div class="reason">
+          <div class="reason-number">04</div>
+          <h3>実力次第でキャリアアップのチャンスも！</h3>
+          <p>年齢や経歴に関係なく、「頑張り」がしっかりと評価される社風。トレーナー、QA、チームリーダーやマネージャーへの昇進、別プロジェクトへの異動など、多彩なキャリアパスが描けます！</p>
+        </div>
+        <div class="reason">
+          <div class="reason-number">05</div>
+          <h3>就労ビザ＆一時滞在先サポートあり！</h3>
+          <p>就労ビザ申請サポート、空港送迎、一時滞在先（マレーシアのみ）の手配まで、入社前後の手続きもフルサポート。初めての海外生活でも安心してスタートできます。</p>
+        </div>
+        <div class="reason">
+          <div class="reason-number">06</div>
+          <h3>多様性あふれる、自由でフラットな社風</h3>
+          <p>国籍・年齢・性別を問わず、お互いを尊重し合える文化が根付いています。世界中の仲間と協力し合いながら働けるのも、TPならではの魅力。世界中の仲間と出会い、協力しながら働ける環境です！</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- =========================================================
-         Videos (YouTube, boxed)
-    ========================================================== -->
-    <section id="videos">
-      <div class="container section-box">
-        <div class="section-head">
-          <span class="eyemark">動画</span>
-          <h2 class="h2">TP を動画で知る</h2>
-          <p class="h2-sub">オフィス、社員の声、カルチャーをピックアップ</p>
-        </div>
-        <div id="videosGrid" class="videos-grid"><!-- will be filled by JS --></div>
-      </div>
-    </section>
-
-    <!-- CITIES (preserved) -->
-    <section class="cities-section reveal" id="cities" aria-labelledby="citiesTitle">
-      <div class="section-head">
-        <h2 id="citiesTitle" class="h2">勤務先都市のご紹介</h2>
-        <p class="h2-sub">マレーシア & タイ — 3つの魅力的な都市</p>
-      </div>
-      <div class="cities-grid">
-        <article class="city-card" aria-label="クアラルンプール">
-          <div class="city-image">🏙️</div>
-          <div class="city-content">
-            <h3 class="city-name">クアラルンプール</h3>
+  <!-- Cities Section with World Map -->
+  <section class="cities">
+    <div class="container">
+      <h2 class="section-title">海外勤務先都市のご紹介</h2>
+      <p class="section-subtitle">マレーシア & タイ — 3つの魅力的な都市</p>
+      <div class="city-cards">
+        <div class="city-card">
+          <img src="photos/KL%201.jpg" alt="クアラルンプール">
+          <div class="city-card-content">
+            <h3>クアラルンプール（KL）</h3>
             <p class="city-country">マレーシア</p>
             <ul class="city-features">
               <li>多数の日本人が暮らすグローバル都市</li>
@@ -590,13 +1788,13 @@
               <li>日本語対応の病院・クリニック充実</li>
               <li>MRT・モノレールで通勤も便利</li>
             </ul>
+            <a href="why-malaysia-thailand.html#kl">詳しく見る →</a>
           </div>
-        </article>
-
-        <article class="city-card" aria-label="ペナン">
-          <div class="city-image">🏖️</div>
-          <div class="city-content">
-            <h3 class="city-name">ペナン</h3>
+        </div>
+        <div class="city-card">
+          <img src="photos/Penang%201.jpg" alt="ペナン">
+          <div class="city-card-content">
+            <h3>ペナン（Penang）</h3>
             <p class="city-country">マレーシア</p>
             <ul class="city-features">
               <li>世界遺産ジョージタウンの歴史の街</li>
@@ -604,13 +1802,13 @@
               <li>物価が非常に安く生活しやすい</li>
               <li>日本人コミュニティが充実</li>
             </ul>
+            <a href="why-malaysia-thailand.html#penang">詳しく見る →</a>
           </div>
-        </article>
-
-        <article class="city-card" aria-label="バンコク">
-          <div class="city-image">🌆</div>
-          <div class="city-content">
-            <h3 class="city-name">バンコク</h3>
+        </div>
+        <div class="city-card">
+          <img src="photos/Bangkok%201.jpg" alt="バンコク">
+          <div class="city-card-content">
+            <h3>バンコク（Bangkok）</h3>
             <p class="city-country">タイ</p>
             <ul class="city-features">
               <li>約8万人以上の日本人が暮らす都市</li>
@@ -618,357 +1816,389 @@
               <li>BTSやMRTで移動も快適</li>
               <li>医療水準が非常に高い</li>
             </ul>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- =========================================================
-         "TPが選ばれる理由"（要約バレット版）
-    ========================================================== -->
-    <section id="why-quick" class="reveal" style="padding:5rem var(--gutter);background:#fff">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="h2">TPが選ばれる理由（要点）</h2>
-          <p class="h2-sub">グローバルな環境、日本語ポジション多数、手厚い移住サポート</p>
-        </div>
-        <div class="grid cols-3 cols-1-sm">
-          <div class="card">
-            <h3 class="u-mt0">🌍 グローバルな環境</h3>
-            <p class="subtle">Text 011</p>
-          </div>
-          <div class="card">
-            <h3 class="u-mt0">🛠 キャリアの幅</h3>
-            <p class="subtle">Text 012</p>
-          </div>
-          <div class="card">
-            <h3 class="u-mt0">🛫 移住サポート</h3>
-            <p class="subtle">Text 013</p>
-          </div>
-          <div class="card">
-            <h3 class="u-mt0">🌈 多様性</h3>
-            <p class="subtle">Text 014</p>
-          </div>
-          <div class="card">
-            <h3 class="u-mt0">✅ こんな方に</h3>
-            <p class="subtle">Text 015</p>
-          </div>
-          <div class="card">
-            <h3 class="u-mt0">💰 余裕のある暮らし</h3>
-            <p class="subtle">Text 016</p>
+            <a href="why-malaysia-thailand.html#bangkok">詳しく見る →</a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- BENEFITS (preserved grid mode) -->
-    <section class="benefits-section reveal" id="benefits" aria-labelledby="benefitsTitle">
-      <div class="section-head">
-        <h2 id="benefitsTitle" class="h2">福利厚生ハイライト</h2>
-        <p class="h2-sub">"安心・成長・楽しさ"を全方位でサポート</p>
+  <!-- World Map Section -->
+  <section class="world-map-section">
+    <div class="container">
+      <h2 class="section-title">世界中に広がるTPネットワーク</h2>
+      <p class="section-subtitle">100カ国以上の拠点から、グローバルサービスを提供</p>
+      <div class="world-map-container">
+        <img src="photos/world%20map%20locations.png" alt="TP世界拠点マップ">
       </div>
-      <div class="benefits-grid">
-        <div class="benefit-item"><span class="benefit-icon">🏥</span><h3 class="benefit-title">医療・保険</h3><p class="benefit-desc">Text 017</p></div>
-        <div class="benefit-item"><span class="benefit-icon">✈️</span><h3 class="benefit-title">渡航・宿泊サポート</h3><p class="benefit-desc">Text 018</p></div>
-        <div class="benefit-item"><span class="benefit-icon">💸</span><h3 class="benefit-title">給与・手当</h3><p class="benefit-desc">Text 019</p></div>
-        <div class="benefit-item"><span class="benefit-icon">🎓</span><h3 class="benefit-title">キャリア支援</h3><p class="benefit-desc">Text 020</p></div>
-        <div class="benefit-item"><span class="benefit-icon">🗣️</span><h3 class="benefit-title">語学</h3><p class="benefit-desc">Text 021</p></div>
-        <div class="benefit-item"><span class="benefit-icon">🎉</span><h3 class="benefit-title">カルチャー</h3><p class="benefit-desc">Text 022</p></div>
-      </div>
-      <div class="container" style="text-align:center;margin-top:1.25rem">
-        <a href="salary-and-benefits.html" class="btn ghost">福利厚生を詳しく</a>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- =========================================================
-         面接プロセス（短）
-    ========================================================== -->
-    <section id="process" class="reveal" style="padding:5rem var(--gutter);background:#fff">
-      <div class="section-head">
-        <h2 class="h2">面接プロセス</h2>
-        <p class="h2-sub">すべてオンラインで完結。日本語サポートで安心</p>
-      </div>
-      <div class="process-short container">
-        <div class="process-step"><strong>① 書類選考</strong>Text 023</div>
-        <div class="process-step"><strong>② オンラインテスト</strong>Text 024</div>
-        <div class="process-step"><strong>③ 一次面接</strong>Text 025</div>
-        <div class="process-step"><strong>④ 二次面接</strong>Text 026</div>
-        <div class="process-step"><strong>⑤ オファー → ビザ</strong>Text 027</div>
-      </div>
-      <div class="container" style="text-align:center;margin-top:1rem">
-        <a href="interview-process.html" class="more-link">さらに見る</a>
-      </div>
-    </section>
-
-    <!-- =========================================================
-         応募方法＋現在の募集（ロケーションカード＋近日公開）
-    ========================================================== -->
-    <section id="apply">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="h2">現在の募集と応募方法</h2>
-          <p class="h2-sub">日本語対応のカスタマーサービス担当者（通年募集）</p>
-        </div>
-
-        <!-- World map (requested) -->
-        <div class="map-wrap">
-          <img src="photos/world%20map%20locations.png" alt="世界の拠点マップ（主要勤務地：KL/ペナン/バンコク）" loading="lazy" decoding="async">
-        </div>
-
-        <div class="grid cols-2 cols-1-sm">
-          <article class="card reveal">
-            <h3 class="u-mt0">職務概要（勤務地：KL／ペナン／バンコク）</h3>
-            <ul class="subtle" style="padding-left:18px">
-              <li>日本語でのお問い合わせ対応（電話・チャット・メール）</li>
-              <li>Eコマース、旅行、ホテル、金融、SNS、ITなど多様な業界</li>
-              <li>KPI・SLAに準じた品質、正確なログ入力、連携・エスカレーション</li>
-            </ul>
-            <div class="badge">応募資格：日本語ビジネスレベル以上（JLPT N2 目安）</div>
-          </article>
-
-          <aside class="card reveal">
-            <h3 class="u-mt0">応募手順</h3>
-            <ol class="subtle" style="padding-left:18px">
-              <li>応募リンクを開く → 「Apply for this job online」</li>
-              <li>アカウント作成／ログイン</li>
-              <li>応募フォーム入力＆履歴書アップロード</li>
-              <li>Submitで完了（確認メールが届きます）</li>
-            </ol>
-            <div class="u-mt12" style="display:flex;gap:10px;flex-wrap:wrap">
-              <a class="btn primary" target="_blank"
-                 href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE">
-                ご応募はこちら
-              </a>
-              <a class="btn ghost" target="_blank" href="https://forms.office.com/e/2UvpbweQww">カジュアル面談</a>
-              <a class="btn ghost" target="_blank" href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd">LINEで最新情報</a>
-            </div>
-          </aside>
-        </div>
-
-        <!-- Location cards (use your provided photos) -->
-        <div class="grid cols-3 cols-1-sm u-mt16" id="applyLocations">
-          <a class="card lift" href="open-jobs.html#kl">
-            <img src="photos/KL%201.jpg" alt="クアラルンプール（KL）の街並み" style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--tp-light);margin-bottom:10px" />
-            <h4 class="u-mt0">マレーシア・クアラルンプール</h4>
-            <p class="subtle">主要ポジション多数</p>
-          </a>
-          <a class="card lift" href="open-jobs.html#penang">
-            <img src="photos/Penang%201.jpg" alt="ペナンの街並み" style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--tp-light);margin-bottom:10px" />
-            <h4 class="u-mt0">マレーシア・ペナン</h4>
-            <p class="subtle">海風を感じる人気エリア</p>
-          </a>
-          <a class="card lift" href="open-jobs.html#bangkok">
-            <img src="photos/Bangkok%201.jpg" alt="バンコクの街並み" style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--tp-light);margin-bottom:10px" />
-            <h4 class="u-mt0">タイ・バンコク</h4>
-            <p class="subtle">日本人コミュニティも充実</p>
-          </a>
-          <div class="card lift">
-            <img src="photos/KL%202.jpg" alt="ジョホールバル（近日公開のダミー画像）" style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--tp-light);margin-bottom:10px" />
-            <h4 class="u-mt0">ジョホールバル <span class="badge">近日公開</span></h4>
-            <p class="subtle">Coming soon</p>
+  <!-- Benefits Section -->
+  <section class="benefits">
+    <div class="container">
+      <h2 class="section-title">福利厚生ハイライト</h2>
+      <p class="section-subtitle">安心・成長・楽しさを全方位でサポート</p>
+      <div class="benefits-list">
+        <div class="benefit-item">
+          <div class="benefit-icon">🏥</div>
+          <div class="benefit-text">
+            <h4>医療保険完備</h4>
+            <p>入社初日から適用される充実の医療保険</p>
           </div>
-          <div class="card lift">
-            <img src="photos/Bangkok%202.jpg" alt="チェンマイ（近日公開のダミー画像）" style="height:160px;width:100%;object-fit:cover;border-radius:10px;border:1px solid var(--tp-light);margin-bottom:10px" />
-            <h4 class="u-mt0">チェンマイ <span class="badge">近日公開</span></h4>
-            <p class="subtle">Coming soon</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">✈️</div>
+          <div class="benefit-text">
+            <h4>渡航・宿泊サポート</h4>
+            <p>片道航空券、初期ホテル、空港送迎</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">💰</div>
+          <div class="benefit-text">
+            <h4>給与・手当</h4>
+            <p>夜勤/住宅/時間外手当（プロジェクトによる）</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">📚</div>
+          <div class="benefit-text">
+            <h4>語学研修</h4>
+            <p>GoFluentやLanguage Bootcamp</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🎯</div>
+          <div class="benefit-text">
+            <h4>キャリア支援</h4>
+            <p>社内異動／JUMPプログラム</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🏖️</div>
+          <div class="benefit-text">
+            <h4>有給休暇</h4>
+            <p>年次有給休暇でリフレッシュ</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- =========================================================
-         オフィス紹介（動的）
-    ========================================================== -->
-    <section id="offices">
-      <div class="section-head">
-        <h2 class="h2">働く環境</h2>
-        <p class="h2-sub">アクセス良好で快適なワークプレイス</p>
+  <!-- Interview Process Section -->
+  <section class="interview-process">
+    <div class="container">
+      <h2 class="section-title">面接プロセス</h2>
+      <p class="section-subtitle">すべてオンラインで完結。日本語サポートで安心</p>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3 class="step-title">書類選考</h3>
+          <p class="step-desc">履歴書・職歴（日本語/英語）</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3 class="step-title">オンラインテスト</h3>
+          <p class="step-desc">語学・業務適性（必要に応じて）</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3 class="step-title">一次面接</h3>
+          <p class="step-desc">採用チームとオンライン</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3 class="step-title">二次面接</h3>
+          <p class="step-desc">配属チームの面接</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <h3 class="step-title">オファー → ビザ</h3>
+          <p class="step-desc">条件確認、EP申請、渡航・初期宿泊</p>
+        </div>
       </div>
-      <div class="office-grid container">
-        <!-- KL G Tower -->
-        <article class="office-card">
-          <div class="office-media">
-            <img src="photos/G%20TOWER.jpg" alt="G Tower（KL）外観">
+    </div>
+  </section>
+
+  <!-- Application Section -->
+  <section class="application-section">
+    <div class="container">
+      <h2 class="section-title">現在の募集と応募方法</h2>
+      <p class="section-subtitle">日本語対応のカスタマーサービス担当者（通年募集）</p>
+      <div class="application-grid">
+        <div class="application-card">
+          <h3>職務概要（勤務地：KL／ペナン／バンコク）</h3>
+          <ul>
+            <li>日本語でのお問い合わせ対応（電話・チャット・メール）</li>
+            <li>Eコマース、旅行、ホテル、金融、SNS、ITなど多様な業界</li>
+            <li>KPI・SLAに準じた品質、正確なログ入力、連携・エスカレーション</li>
+          </ul>
+          <div class="badge">応募資格：日本語ビジネスレベル以上（JLPT N2 目安）</div>
+        </div>
+        <div class="application-card">
+          <h3>応募手順</h3>
+          <ol>
+            <li>応募リンクを開く → 「Apply for this job online」</li>
+            <li>アカウント作成／ログイン</li>
+            <li>応募フォーム入力＆履歴書アップロード</li>
+            <li>Submitで完了（確認メールが届きます）</li>
+          </ol>
+          <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener" class="btn btn-primary">ご応募はこちら</a>
+            <a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener" class="btn btn-ghost">カジュアル面談</a>
           </div>
-          <div class="office-body">
-            <h3 class="u-mt0">G Tower（KL）</h3>
-            <ul class="subtle" style="padding-left:18px">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Office Environment Section -->
+  <section class="office-section">
+    <div class="container">
+      <h2 class="section-title">働く環境</h2>
+      <p class="section-subtitle">アクセス良好で快適なワークプレイス</p>
+      <div class="office-grid">
+        <div class="office-card">
+          <img src="photos/G%20TOWER.jpg" alt="G Tower KL" class="office-image">
+          <div class="office-info">
+            <h3 class="office-name">G Tower（KL）</h3>
+            <ul class="office-features">
               <li>Ampang Park直結（MRT/LRT）</li>
               <li>KLCC/Intermark徒歩圏</li>
               <li>Grade Aオフィス</li>
             </ul>
-            <a class="more-link" href="office-environment.html">さらに見る</a>
           </div>
-        </article>
-
-        <!-- Penang Livingston -->
-        <article class="office-card">
-          <div class="office-media">
-            <img src="photos/LV.png" alt="Penang — Livingston">
-          </div>
-          <div class="office-body">
-            <h3 class="u-mt0">Penang — Livingston</h3>
-            <ul class="subtle" style="padding-left:18px">
+        </div>
+        <div class="office-card">
+          <img src="photos/Reception.png" alt="Penang Livingston" class="office-image">
+          <div class="office-info">
+            <h3 class="office-name">Penang — Livingston</h3>
+            <ul class="office-features">
               <li>静かな環境</li>
               <li>飲食店・薬局</li>
               <li>アクセス良好</li>
             </ul>
-            <a class="more-link" href="office-environment.html#penang">さらに見る</a>
           </div>
-        </article>
-
-        <!-- Penang GBS@Mahsuri -->
-        <article class="office-card">
-          <div class="office-media">
-            <img src="photos/GBS.jpeg" alt="Penang — GBS@Mahsuri">
-          </div>
-          <div class="office-body">
-            <h3 class="u-mt0">Penang — GBS@Mahsuri</h3>
-            <ul class="subtle" style="padding-left:18px">
-              <li>州のGBSハブ</li>
-              <li>IT/BPO集積</li>
-              <li>徒歩圏に生活インフラ</li>
-            </ul>
-            <a class="more-link" href="office-environment.html#mahsuri">さらに見る</a>
-          </div>
-        </article>
-
-        <!-- Penang One Precinct -->
-        <article class="office-card">
-          <div class="office-media">
-            <img src="photos/Reception.png" alt="Penang — One Precinct（レセプション）">
-          </div>
-          <div class="office-body">
-            <h3 class="u-mt0">Penang — One Precinct</h3>
-            <ul class="subtle" style="padding-left:18px">
+        </div>
+        <div class="office-card">
+          <img src="photos/Reception%20(1).png" alt="Penang One Precinct" class="office-image">
+          <div class="office-info">
+            <h3 class="office-name">Penang — One Precinct</h3>
+            <ul class="office-features">
               <li>Bayan Baruのモダンビル</li>
               <li>空港から約15分</li>
               <li>Queensbay Mall近く</li>
             </ul>
-            <a class="more-link" href="office-environment.html#one-precinct">さらに見る</a>
           </div>
-        </article>
-
-        <!-- Bangkok Singha Complex (use city shot) -->
-        <article class="office-card">
-          <div class="office-media">
-            <img src="photos/Bangkok%201.jpg" alt="Bangkok — Singha Complex（イメージ）">
+        </div>
+        <div class="office-card">
+          <img src="photos/GBS.jpeg" alt="GBS Mahsuri" class="office-image">
+          <div class="office-info">
+            <h3 class="office-name">Penang — GBS@Mahsuri</h3>
+            <ul class="office-features">
+              <li>州のGBSハブ</li>
+              <li>IT/BPO集積</li>
+              <li>徒歩圏に生活インフラ</li>
+            </ul>
           </div>
-          <div class="office-body">
-            <h3 class="u-mt0">Bangkok — Singha Complex</h3>
-            <ul class="subtle" style="padding-left:18px">
+        </div>
+        <div class="office-card">
+          <img src="photos/Bangkok%202.jpg" alt="Bangkok Singha Complex" class="office-image">
+          <div class="office-info">
+            <h3 class="office-name">Bangkok — Singha Complex</h3>
+            <ul class="office-features">
               <li>BTS/MRT至近</li>
               <li>日本人コミュニティに便利</li>
               <li>モダンな商業複合</li>
             </ul>
-            <a class="more-link" href="office-environment.html#bkk">さらに見る</a>
           </div>
-        </article>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Reception alt images -->
-        <article class="office-card">
-          <div class="office-media">
-            <img src="photos/Reception%20(2).png" alt="オフィス受付（別アングル）">
+  <!-- Virtual Office Tour Section -->
+  <section class="virtual-tour">
+    <div class="container">
+      <h2 class="section-title">TP マレーシア & タイ バーチャルオフィスツアー</h2>
+      <p class="section-subtitle">海外拠点の職場環境を、オンラインで体感してみませんか？</p>
+      <div class="virtual-tour-container">
+        <p>現地のリアルな働く環境を、バーチャルでご案内します。実際にオフィスを訪れるように、各拠点の雰囲気・設備・働く空間をご覧いただけます。</p>
+        <a href="https://vtour.cloud/mh2n0j/ae5772z1/Bella's" target="_blank" rel="noopener" class="virtual-tour-link">
+          バーチャルツアーを開始 →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lifestyle Gallery Section -->
+  <section class="lifestyle-section">
+    <div class="container">
+      <h2 class="section-title">仕事だけじゃない。アクティブな毎日。</h2>
+      <p class="section-subtitle">カフェ、ビーチ、ハイキング、近隣諸国へ週末旅行も</p>
+      <div class="lifestyle-grid">
+        <div class="lifestyle-item">
+          <img src="photos/KL%202.jpg" alt="カフェ文化">
+          <div class="lifestyle-caption">カフェ巡り</div>
+        </div>
+        <div class="lifestyle-item">
+          <img src="photos/Penang%201.jpg" alt="ビーチライフ">
+          <div class="lifestyle-caption">ビーチでリラックス</div>
+        </div>
+        <div class="lifestyle-item">
+          <img src="photos/Bangkok%201.jpg" alt="ナイトマーケット">
+          <div class="lifestyle-caption">ナイトマーケット</div>
+        </div>
+        <div class="lifestyle-item">
+          <img src="photos/Condo.jpg" alt="プール付きコンド">
+          <div class="lifestyle-caption">プール・ジム付き生活</div>
+        </div>
+        <div class="lifestyle-item">
+          <div style="background: var(--tp-off); height: 100%; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🏃</div>
+          <div class="lifestyle-caption">朝のランニング</div>
+        </div>
+        <div class="lifestyle-item">
+          <div style="background: var(--tp-off); height: 100%; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🧘</div>
+          <div class="lifestyle-caption">ヨガでリフレッシュ</div>
+        </div>
+        <div class="lifestyle-item">
+          <div style="background: var(--tp-off); height: 100%; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🏝️</div>
+          <div class="lifestyle-caption">週末アイランドホッピング</div>
+        </div>
+        <div class="lifestyle-item">
+          <div style="background: var(--tp-off); height: 100%; display: flex; align-items: center; justify-content: center; font-size: 3rem;">✈️</div>
+          <div class="lifestyle-caption">近隣諸国へ週末旅行</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">社員の声</h2>
+      <p class="section-subtitle">実際に働くメンバーの"リアルな感想"</p>
+      <div class="testimonial-cards">
+        <div class="testimonial">
+          <p class="testimonial-content">物価が安いから、カフェ巡りや外食が気軽に楽しめるようになりました。通勤ストレスがなくなり、平日の夜もヨガや友達との時間をゆったり過ごせます。</p>
+          <div class="testimonial-author">
+            <img src="photos/Maho.png" alt="Maho" class="author-img">
+            <div class="author-info">
+              <strong>Maho</strong>
+              <span>Sourcer・20代女性</span>
+            </div>
           </div>
-          <div class="office-body">
-            <h3 class="u-mt0">オフィス受付</h3>
-            <p class="subtle">Text 028</p>
-            <a class="more-link" href="office-environment.html#reception">さらに見る</a>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-content">毎週末にプール、サウナ、ジム。こんな暮らし、日本では考えられませんでした！休日は友達とビーチやナイトマーケットへ。仕事も遊びもバランスよく楽しめています！</p>
+          <div class="testimonial-author">
+            <img src="photos/Joseph%20on%20vacation.jpg" alt="社員" class="author-img">
+            <div class="author-info">
+              <strong>社員A</strong>
+              <span>カスタマーサポート・30代男性</span>
+            </div>
           </div>
-        </article>
-      </div>
-      <div class="container" style="text-align:center;margin-top:1rem">
-        <a href="office-environment.html" class="more-link">さらに見る</a>
-      </div>
-    </section>
-
-    <!-- =========================================================
-         生活ギャラリー（動的）
-    ========================================================== -->
-    <section id="lifestyle">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="h2">仕事だけじゃない。アクティブな毎日。</h2>
-          <p class="h2-sub">カフェ、ビーチ、ハイキング、近隣諸国へ週末旅行も</p>
         </div>
-        <div class="gallery" id="gallery">
-          <!-- Filled by JS with your provided images -->
+        <div class="testimonial">
+          <p class="testimonial-content">英語が苦手でも、日本語メインの仕事からスタートできたので安心でした。段階的にスキルを伸ばせる環境で、今では英語でのコミュニケーションも楽しめるようになりました。</p>
+          <div class="testimonial-author">
+            <img src="photos/Maho%20in%20front%20ofKLCC.jpg" alt="社員" class="author-img">
+            <div class="author-info">
+              <strong>社員B</strong>
+              <span>元営業職・30代</span>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- =========================================================
-         社員の声（動的）
-    ========================================================== -->
-    <section id="voices">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="h2" data-i18n="nav.testimonials">社員の声</h2>
-          <p class="h2-sub">実際に働くメンバーの"リアルな感想"</p>
+  <!-- TA Team Section -->
+  <section class="ta-team">
+    <div class="container">
+      <h2 class="section-title">採用チーム</h2>
+      <p class="section-subtitle">応募から入社まで、日本語で伴走します</p>
+      <div class="ta-team-grid">
+        <div class="ta-member">
+          <img src="photos/Joseph%20Hiroyuki%20Ueda.jpg" alt="Joseph" class="ta-member-img">
+          <h3 class="ta-member-name">Joseph</h3>
+          <p class="ta-member-role">TA Manager | Recruiter</p>
+          <p class="ta-member-desc">キャリア相談、お気軽にどうぞ。</p>
         </div>
-        <div class="grid cols-3 cols-2-md cols-1-sm" id="voiceGrid">
-          <!-- Filled by JS -->
+        <div class="ta-member">
+          <img src="photos/Maho.png" alt="Maho" class="ta-member-img">
+          <h3 class="ta-member-name">Maho</h3>
+          <p class="ta-member-role">Sourcer</p>
+          <p class="ta-member-desc">初めての海外就職も、日本語で伴走します。</p>
         </div>
-      </div>
-    </section>
-
-    <!-- =========================================================
-         採用チーム（動的）
-    ========================================================== -->
-    <section id="ta-team" class="reveal">
-      <div class="section-head">
-        <h2 class="h2">採用チーム</h2>
-        <p class="h2-sub">応募から入社まで、日本語で伴走します</p>
-      </div>
-      <div class="ta-grid container" id="taGrid">
-        <!-- Filled by JS; uses 5 members (3 photos provided + 2 placeholders) -->
-      </div>
-    </section>
-
-    <!-- =========================================================
-         Mini FAQ（動的）
-    ========================================================== -->
-    <section id="mini-faq">
-      <div class="section-head">
-        <h2 class="h2">FAQ</h2>
-        <p class="h2-sub">詳細はFAQページでも随時更新しています</p>
-      </div>
-      <div class="faq-box">
-        <details>
-          <summary>英語に自信がなくても応募できますか？</summary>
-          <p>はい、日本語中心のポジションが多数あります。入社後に英語力を伸ばす支援もあります。</p>
-        </details>
-        <details>
-          <summary>就労ビザの手続きは難しいですか？</summary>
-          <p>会社が申請を代行します。必要書類も日本語でご案内します。</p>
-        </details>
-        <details>
-          <summary>住居はどうやって探せば良いですか？</summary>
-          <p>現地エージェントの紹介、オリエンテーションでのアドバイスなどを提供します。</p>
-        </details>
-        <details>
-          <summary>シフト勤務はありますか？</summary>
-          <p>プロジェクトにより24/7サービスの夜勤・週末シフトがありますが、手当が付きます。</p>
-        </details>
-        <div class="container" style="text-align:center;margin-top:.5rem">
-          <a href="faq.html" class="more-link">FAQページへ</a>
+        <div class="ta-member">
+          <img src="photos/Akito%20san.jpg" alt="Akito" class="ta-member-img">
+          <h3 class="ta-member-name">Akito</h3>
+          <p class="ta-member-role">Recruiter</p>
+          <p class="ta-member-desc">キャリア相談、お気軽にどうぞ。</p>
+        </div>
+        <div class="ta-member">
+          <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--tp-off); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; border: 3px solid var(--tp-light);">👩</div>
+          <h3 class="ta-member-name">Koyori</h3>
+          <p class="ta-member-role">Coordinator</p>
+          <p class="ta-member-desc">渡航手続きや現地生活もフォローします。</p>
+        </div>
+        <div class="ta-member">
+          <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--tp-off); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; border: 3px solid var(--tp-light);">👨</div>
+          <h3 class="ta-member-name">Maya</h3>
+          <p class="ta-member-role">TA | Japan Market</p>
+          <p class="ta-member-desc">ご希望のプロジェクトを一緒に探します。</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- =========================================================
-         Ask ChatGPT Section
-    ========================================================== -->
-    <section id="ask-chatgpt">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="h2" data-i18n="chatgpt.title">Ask ChatGPT（TPについて質問）</h2>
-          <p class="h2-sub" data-i18n="chatgpt.sub">下のプロンプトをコピーして、ChatGPTに貼り付けてください。</p>
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-title">FAQ</h2>
+      <p class="section-subtitle">詳細はFAQページでも随時更新しています</p>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">英語に自信がなくても応募できますか？</div>
+          <div class="faq-answer">
+            <p>はい、日本語中心のポジションが多数あります。入社後に英語力を伸ばす支援もあります。</p>
+          </div>
         </div>
+        <div class="faq-item">
+          <div class="faq-question">就労ビザの手続きは難しいですか？</div>
+          <div class="faq-answer">
+            <p>会社が申請を代行します。必要書類も日本語でご案内します。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">住居はどうやって探せば良いですか？</div>
+          <div class="faq-answer">
+            <p>現地エージェントの紹介、オリエンテーションでのアドバイスなどを提供します。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">シフト勤務はありますか？</div>
+          <div class="faq-answer">
+            <p>プロジェクトにより24/7サービスの夜勤・週末シフトがありますが、手当が付きます。</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="faq.html" class="btn btn-primary">FAQページへ</a>
+      </div>
+    </div>
+  </section>
 
-        <div class="card reveal">
-          <textarea id="chatgptPrompt" rows="10" style="width:100%;resize:vertical" class="chatgpt-text" readonly>
-あなたは就職アドバイザーです。テレパフォーマンス（Teleperformance）マレーシア／タイ（TP Malaysia / TP Thailand）について、候補者が安心して応募を検討できるよう、以下の条件でポジティブに紹介してください。
+  <!-- ChatGPT Section -->
+  <section class="chatgpt-section">
+    <div class="container">
+      <h2 class="section-title">Ask ChatGPT（TPについて質問）</h2>
+      <p class="section-subtitle">下のプロンプトをコピーして、ChatGPTに貼り付けてください。</p>
+      <div class="chatgpt-container">
+        <div class="chatgpt-box">
+          <textarea class="chatgpt-prompt" readonly>あなたは就職アドバイザーです。テレパフォーマンス（Teleperformance）マレーシア／タイ（TP Malaysia / TP Thailand）について、候補者が安心して応募を検討できるよう、以下の条件でポジティブに紹介してください。
 
 【必須メッセージ】
 - 私たちは Great Place to Work® を6年連続で受賞しています。
@@ -983,338 +2213,172 @@
 【トーンと形式】
 - 前向きでフレンドリー、かつ現実的。誇張や保証の断定は避ける。
 - 箇条書き＋短い段落で読みやすく。
-- 最後に「応募」や「カジュアル面談」への自然な誘導（CTA）を添える。
-          </textarea>
-          <div class="u-mt12" style="display:flex;gap:10px;flex-wrap:wrap">
-            <button id="copyPromptBtn" class="btn">プロンプトをコピー</button>
-            <a id="openChatGPTBtn" class="btn ghost" href="https://chat.openai.com/" target="_blank" rel="noopener">ChatGPT を開く</a>
-            <span class="subtle">※ AIアシスタントに相談できます。</span>
+- 最後に「応募」や「カジュアル面談」への自然な誘導（CTA）を添える。</textarea>
+          <div class="chatgpt-buttons">
+            <button class="btn btn-primary" onclick="navigator.clipboard.writeText(document.querySelector('.chatgpt-prompt').value); alert('プロンプトをコピーしました！')">プロンプトをコピー</button>
+            <button class="btn btn-ghost" onclick="window.open('https://chat.openai.com', '_blank')">ChatGPT を開く</button>
+            <span style="color: var(--tp-gray); font-size: 0.9rem;">※ AIアシスタントに相談できます。</span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- =========================================================
-         Contact Section（背景にTPウォーターマーク） — USE EXACTLY AS PROVIDED
-    ========================================================== -->
-    <section id="contact">
-      <div class="container">
-        <div class="tp-watermark" aria-hidden="true">TP</div>
-        <div class="section-head">
-          <h2 class="h2" data-i18n="nav.contact">お問い合わせ</h2>
-          <p class="h2-sub">日本語で気軽にご相談ください。面談予約や応募のご質問も歓迎です。</p>
-        </div>
-
-        <div class="grid cols-2 cols-1-sm">
-          <form id="contactForm" class="card reveal" novalidate>
-            <div class="grid cols-2 cols-1-sm">
-              <div>
-                <label for="name" data-i18n="form.name.label">お名前</label>
-                <input id="name" name="name" type="text" data-i18n-placeholder="form.name.placeholder" placeholder="山田 太郎" required />
-              </div>
-              <div>
-                <label for="email" data-i18n="form.email.label">メールアドレス</label>
-                <input id="email" name="email" type="email" data-i18n-placeholder="form.email.placeholder" placeholder="you@example.com" required />
-              </div>
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="container">
+      <h2 class="section-title">お問い合わせ</h2>
+      <p class="section-subtitle">日本語で気軽にご相談ください。面談予約や応募のご質問も歓迎です。</p>
+      <div class="contact-grid">
+        <form class="contact-form" onsubmit="event.preventDefault();alert('送信しました（ダミー）')">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">お名前</label>
+              <input type="text" id="name" placeholder="山田 太郎" required>
             </div>
-            <div class="u-mt12">
-              <label for="msg" data-i18n="form.message.label">ご相談内容</label>
-              <textarea id="msg" name="msg" rows="6" data-i18n-placeholder="form.message.placeholder" placeholder="気になる求人、移住、英語レベル、入社時期など"></textarea>
+            <div class="form-group">
+              <label for="email">メールアドレス</label>
+              <input type="email" id="email" placeholder="you@example.com" required>
             </div>
-            <div class="u-mt12" style="display:flex;gap:10px;flex-wrap:wrap">
-              <button class="btn primary" type="submit" data-i18n="form.submit">送信</button>
-              <a class="btn ghost" target="_blank"
-                 href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE">応募ページを開く</a>
-            </div>
-          </form>
-
-          <aside class="card reveal">
-            <h3 class="u-mt0">すぐに確認したい方へ</h3>
-            <ul class="linklist">
-              <li><a target="_blank" href="https://forms.office.com/e/2UvpbweQww">カジュアル面談の予約フォーム</a></li>
-              <li><a target="_blank" href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd">LINE公式アカウント</a></li>
-              <li><a target="_blank"
-                     href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE">現在の募集を確認</a></li>
-            </ul>
-            <div class="badge u-mt12">💡 入力は日本語でOKです</div>
-          </aside>
-        </div>
+          </div>
+          <div class="form-group">
+            <label for="message">ご相談内容</label>
+            <textarea id="message" placeholder="気になる求人、移住、英語レベル、入社時期など" required></textarea>
+          </div>
+          <div class="form-buttons">
+            <button type="submit" class="btn btn-primary">送信</button>
+            <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener" class="btn btn-ghost">応募ページを開く</a>
+          </div>
+        </form>
+        <aside class="contact-info">
+          <h3>すぐに確認したい方へ</h3>
+          <ul class="contact-links">
+            <li><a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener">カジュアル面談の予約フォーム</a></li>
+            <li><a href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd" target="_blank" rel="noopener">LINE公式アカウント</a></li>
+            <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener">現在の募集を確認</a></li>
+          </ul>
+          <div class="badge" style="margin-top: 1.5rem;">💡 入力は日本語でOKです</div>
+        </aside>
       </div>
-    </section>
+    </div>
+  </section>
+</main>
 
-    <!-- =========================================================
-         Footer (brand card style, JP only)
-    ========================================================== -->
-    <footer class="site-footer site-footer--brandcard">
-      <div class="container">
-        <!-- Brand card -->
-        <div class="f-brandcard card">
-          <div class="f-brandcard__head">
-            <div class="f-brandcard__mark" aria-hidden="true">TP</div>
-            <div class="f-brandcard__titlewrap">
-              <div class="f-brandcard__title">TP</div>
-              <div class="f-brandcard__sub">Malaysia · Thailand — 日本語採用</div>
-            </div>
-          </div>
-
-          <p class="f-brandcard__desc">
-            テレパフォーマンスは、日本語スピーカーの海外キャリアを
-            就労ビザと移住サポートで伴走します。
-          </p>
-
-          <div class="f-badges">
-            <span class="pill">🏆 Great Place to Work®</span>
-            <span class="pill">🌍 Diversity &amp; Inclusion</span>
-          </div>
-        </div>
-
-        <!-- Quick links -->
-        <div class="f-quick">
-          <h4 class="f-quick__title">クイックリンク</h4>
-
-          <div class="f-quick__buttons">
-            <a href="faq.html" class="btn ghost" style="width:100%;">FAQ</a>
-
-            <a
-              href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE"
-              target="_blank"
-              rel="noopener"
-              class="btn primary"
-              data-i18n="cta.apply"
-              style="width:100%;"
-            >ご応募はこちら</a>
-          </div>
-
-          <div class="f-quick__links">
-            <a href="about-tp.html">会社紹介</a>
-            <a href="open-jobs.html">求人一覧</a>
-            <a href="salary-and-benefits.html">給与・福利厚生</a>
-            <a href="relocation-visa.html">移住・ビザ</a>
-            <a href="interview-process.html">面接プロセス</a>
-            <a href="why-malaysia-thailand.html">勤務先都市</a>
-          </div>
-        </div>
-
-        <!-- Copyright -->
-        <div class="f-copy">
-          © <span id="year"></span> Teleperformance. All rights reserved.
-        </div>
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>TELEPERFORMANCE</h3>
+      <p style="opacity: 0.8; line-height: 1.8;">テレパフォーマンスは、日本語スピーカーの<br>
+      海外キャリアを就労ビザと移住サポートで伴走します。<br>
+      Great Place to Work® 認定企業</p>
+      <div class="badges">
+        <img src="photos/TPLogo11.png" alt="TP Logo">
+        <img src="photos/great%20place%20to%20work.png" alt="Great Place to Work">
+        <img src="photos/LV.png" alt="LV Award" style="height: 35px;">
       </div>
-    </footer>
+    </div>
+    <div class="footer-section">
+      <h3>会社情報</h3>
+      <ul>
+        <li><a href="about-tp.html">会社紹介</a></li>
+        <li><a href="ta-team.html">採用チーム</a></li>
+        <li><a href="culture-and-events.html">企業文化</a></li>
+        <li><a href="office-environment.html">オフィス環境</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>求人・キャリア</h3>
+      <ul>
+        <li><a href="open-jobs.html">求人一覧</a></li>
+        <li><a href="salary-and-benefits.html">給与・福利厚生</a></li>
+        <li><a href="career-growth.html">キャリア成長</a></li>
+        <li><a href="interview-process.html">面接プロセス</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>生活情報</h3>
+      <ul>
+        <li><a href="cost-of-living.html">生活コスト</a></li>
+        <li><a href="daily-life-malaysia.html">マレーシアの暮らし</a></li>
+        <li><a href="area-around-office.html">オフィス周辺</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>サポート</h3>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="casual-interview.html">カジュアル面談</a></li>
+        <li><a href="relocation-visa.html">移住・ビザ</a></li>
+        <li><a href="why-malaysia-thailand.html">勤務先都市</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Teleperformance. All rights reserved. 
+    <a href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd" target="_blank" rel="noopener">LINE公式</a> | 
+    <a href="https://careerseng-teleperformance.icims.com/" target="_blank" rel="noopener">External RAF</a> |
+    <a href="testimonials.html">社員インタビュー</a></p>
+  </div>
+</footer>
 
-    <!-- Floating buttons -->
-    <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE"
-       class="floating-apply" target="_blank" rel="noopener">ご応募はこちら →</a>
-    <button type="button" class="back-to-top" id="backToTop" aria-label="ページ上部へ">↑</button>
+<a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener" class="floating-apply">ご応募はこちら →</a>
 
-  </main>
+<script>
+// Set current year
+document.getElementById('year').textContent = new Date().getFullYear();
 
-  <noscript><div style="padding:1rem;text-align:center;background:#fff3cd;color:#7a5d00;">JavaScript を有効にすると表示がより快適になります。</div></noscript>
-
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Teleperformance Japan","url":"https://example.com/","logo":"https://example.com/photos/TPLogo11.png","sameAs":["https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd"]}
-  </script>
-
-  <!-- Minimal JS for nav, reveals, fills -->
-  <script>
-    (function(){
-      const $ = (s, r=document) => r.querySelector(s);
-      const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
-
-      // Footer year
-      const y = $('#year'); if (y) y.textContent = new Date().getFullYear();
-
-      // Mobile drawer
-      const navToggle = $('#navToggle');
-      const navDrawer = $('#navDrawer');
-      const navScrim  = $('#navScrim');
-
-      function openDrawer(){
-        navDrawer.classList.add('open');
-        navScrim.classList.add('open'); navScrim.hidden = false;
-        navDrawer.setAttribute('aria-hidden','false');
-        navToggle.setAttribute('aria-expanded','true');
-        const firstLink = navDrawer.querySelector('a'); firstLink && firstLink.focus();
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', () => {
+    const item = question.parentElement;
+    item.classList.toggle('active');
+    
+    // Close other items
+    document.querySelectorAll('.faq-item').forEach(otherItem => {
+      if (otherItem !== item) {
+        otherItem.classList.remove('active');
       }
-      function closeDrawer(){
-        navDrawer.classList.remove('open');
-        navScrim.classList.remove('open');
-        navDrawer.setAttribute('aria-hidden','true');
-        navToggle.setAttribute('aria-expanded','false');
-        setTimeout(()=>{ navScrim.hidden = true; },200);
-        navToggle.focus();
-      }
-      navToggle && navToggle.addEventListener('click', ()=> (navToggle.getAttribute('aria-expanded')==='true') ? closeDrawer() : openDrawer());
-      navScrim && navScrim.addEventListener('click', closeDrawer);
-      navDrawer && navDrawer.addEventListener('keydown', e => { if (e.key==='Escape') closeDrawer(); });
-      $$('#navDrawer a').forEach(a => a.addEventListener('click', closeDrawer));
+    });
+  });
+});
 
-      // Back to top
-      const toTop = $('#backToTop');
-      function trackScroll(){ const sc = window.scrollY||document.documentElement.scrollTop; (sc>600)?toTop.classList.add('show'):toTop.classList.remove('show'); }
-      toTop && toTop.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
-      window.addEventListener('scroll', trackScroll, {passive:true}); trackScroll();
-
-      // Reveal on scroll
-      const reveals = $$('.reveal');
-      if ('IntersectionObserver' in window){
-        const io = new IntersectionObserver((entries)=>{ entries.forEach(ent=>{ if(ent.isIntersecting){ ent.target.classList.add('in'); io.unobserve(ent.target); } }); },{root:null,threshold:.1,rootMargin:'0px 0px -10% 0px'});
-        reveals.forEach(el=>io.observe(el));
-      } else { reveals.forEach(el=>el.classList.add('in')); }
-
-      // Smooth anchors robustness
-      $$('a[href^="#"]').forEach(a=>{
-        a.addEventListener('click', e=>{
-          const id = a.getAttribute('href'); if (!id || id==='#') return;
-          const t = document.querySelector(id); if (!t) return;
-          e.preventDefault(); t.scrollIntoView({behavior:'smooth', block:'start'}); history.pushState(null,'',id);
-        });
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
       });
+    }
+  });
+});
 
-      // Videos fill (YouTube IDs; replace with your actual IDs later)
-      const videos = [
-        { id:'dQw4w9WgXcQ', title:'Text 029'},
-        { id:'ba7rRfKIHxU', title:'Text 030'},
-        { id:'ysz5S6PUM-U', title:'Text 031'},
-        { id:'kXYiU_JCYtU', title:'Text 032'},
-        { id:'ScMzIvxBSi4', title:'Text 033'},
-        { id:'3GwjfUFyY6M', title:'Text 034'}
-      ];
-      const vg = $('#videosGrid');
-      if (vg) {
-        videos.forEach(v=>{
-          const wrap = document.createElement('div');
-          wrap.className = 'video-embed';
-          wrap.innerHTML = `<iframe src="https://www.youtube.com/embed/${v.id}" title="${v.title}" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>`;
-          vg.appendChild(wrap);
-        });
-      }
+// Intersection Observer for animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
 
-      // Lifestyle gallery fill (use provided photos)
-      const galleryData = [
-        { src:'photos/Condo.jpg', cap:'Text 035'},
-        { src:'photos/KL%201.jpg', cap:'Text 036'},
-        { src:'photos/KL%202.jpg', cap:'Text 037'},
-        { src:'photos/Penang%201.jpg', cap:'Text 038'},
-        { src:'photos/Bangkok%201.jpg', cap:'Text 039'},
-        { src:'photos/Bangkok%202.jpg', cap:'Text 040'},
-        { src:'photos/Reception.png', cap:'Text 041'},
-        { src:'photos/Reception%20(1).png', cap:'Text 042'}
-      ];
-      const gallery = $('#gallery');
-      if (gallery){
-        galleryData.forEach(g=>{
-          const fig = document.createElement('figure');
-          fig.innerHTML = `<img src="${g.src}" alt="${g.cap}"><figcaption>${g.cap}</figcaption>`;
-          gallery.appendChild(fig);
-        });
-      }
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, observerOptions);
 
-      // Voices (testimonials) — use provided photos and placeholders
-      const voices = [
-        {
-          name:'Joseph Hiroyuki Ueda',
-          role:'TA Manager | Recruiter',
-          photo:'photos/Joseph%20Hiroyuki%20Ueda.jpg',
-          quote:'Text 043'
-        },
-        {
-          name:'Maho',
-          role:'Sourcer',
-          photo:'photos/Maho.png',
-          quote:'Text 044'
-        },
-        {
-          name:'Akito',
-          role:'Recruiter',
-          photo:'photos/Akito%20san.jpg',
-          quote:'Text 045'
-        },
-        {
-          name:'Text 046',
-          role:'Text 047',
-          photo:'photos/Joseph%20on%20vacation.jpg',
-          quote:'Text 048'
-        },
-        {
-          name:'Text 049',
-          role:'Text 050',
-          photo:'photos/Reception%20(2).png',
-          quote:'Text 051'
-        },
-        {
-          name:'Text 052',
-          role:'Text 053',
-          photo:'photos/Bangkok%201.jpg',
-          quote:'Text 054'
-        }
-      ];
-      const voiceGrid = $('#voiceGrid');
-      if (voiceGrid){
-        voices.forEach(v=>{
-          const card = document.createElement('article');
-          card.className = 'voice-card';
-          card.innerHTML = `
-            <div class="voice-head">
-              <img class="avatar" src="${v.photo}" alt="${v.name}">
-              <div>
-                <div><strong>${v.name}</strong></div>
-                <div class="voice-role">${v.role}</div>
-              </div>
-            </div>
-            <div class="voice-body">“${v.quote}”</div>
-          `;
-          voiceGrid.appendChild(card);
-        });
-      }
-
-      // TA Team (5 people; 3 photos provided + 2 placeholders to add later)
-      const ta = [
-        { name:'Joseph', role:'TA Manager | Recruiter', note:'キャリア相談、お気軽にどうぞ。', photo:'photos/Joseph%20Hiroyuki%20Ueda.jpg' },
-        { name:'Maho', role:'Sourcer', note:'初めての海外就職も、日本語で伴走します。', photo:'photos/Maho.png' },
-        { name:'Akito', role:'Recruiter', note:'キャリア相談、お気軽にどうぞ。', photo:'photos/Akito%20san.jpg' },
-        { name:'Koyori', role:'Coordinator', note:'渡航手続きや現地生活もフォローします。', photo:'photos/Koyori.jpg' }, /* placeholder — please add */
-        { name:'Maya', role:'TA | Japan Market', note:'ご希望のプロジェクトを一緒に探します。', photo:'photos/Maya.jpg' }      /* placeholder — please add */
-      ];
-      const taGrid = $('#taGrid');
-      if (taGrid){
-        ta.forEach(m=>{
-          const el = document.createElement('div');
-          el.className = 'ta-card';
-          el.innerHTML = `
-            <img class="ta-photo" src="${m.photo}" alt="${m.name}">
-            <div class="ta-name">${m.name}</div>
-            <div class="ta-role">${m.role}</div>
-            <div class="ta-note">${m.note}</div>
-          `;
-          taGrid.appendChild(el);
-        });
-      }
-
-      // ChatGPT prompt copy
-      const copyBtn = $('#copyPromptBtn'), taTxt = $('#chatgptPrompt');
-      copyBtn && taTxt && copyBtn.addEventListener('click', async()=>{
-        try{
-          await navigator.clipboard.writeText(taTxt.value);
-          copyBtn.textContent = 'コピーしました！';
-          setTimeout(()=>copyBtn.textContent='プロンプトをコピー',1500);
-        }catch(e){ alert('コピーに失敗しました'); }
-      });
-
-      // Contact form (simple demo)
-      const form = document.getElementById('contactForm');
-      if (form){
-        form.addEventListener('submit', (e)=>{
-          e.preventDefault();
-          const name = (document.getElementById('name')||{}).value?.trim();
-          const email = (document.getElementById('email')||{}).value?.trim();
-          if(!name || !email){ alert('必須項目を入力してください。'); return; }
-          alert('送信しました（ダミー）');
-          form.reset();
-        });
-      }
-    })();
-  </script>
+// Observe elements with animation
+document.querySelectorAll('.card, .reason, .city-card, .benefit-item, .testimonial, .ta-member, .office-card, .lifestyle-item').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(el);
+});
+</script>
 </body>
 </html>
