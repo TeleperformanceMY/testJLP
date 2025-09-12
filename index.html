@@ -78,21 +78,6 @@ a {
   border: 0;
 }
 
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: var(--tp-black);
-  color: var(--tp-white);
-  padding: 8px 16px;
-  z-index: 2000;
-  border-radius: 0 0 4px 0;
-}
-
-.skip-link:focus {
-  top: 0;
-}
-
 /* Header */
 header {
   position: sticky;
@@ -467,32 +452,6 @@ nav a:focus {
   color: var(--tp-gray);
   margin-bottom: 2rem;
   font-size: 0.9rem;
-}
-
-/* Sort Bar */
-.sortbar {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0.625rem 0 1.25rem;
-  justify-content: center;
-}
-
-.sortbar select {
-  padding: 0.4rem 0.625rem;
-  border: 1px solid var(--tp-light);
-  border-radius: 6px;
-  background: var(--tp-white);
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.sortbar select:hover,
-.sortbar select:focus {
-  border-color: var(--tp-black);
-  outline: none;
-  box-shadow: var(--shadow-sm);
 }
 
 /* About Section */
@@ -1886,7 +1845,7 @@ footer::before {
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Teleperformance Japan",
+  "name": "TP Japan",
   "alternateName": "TP Japan",
   "url": "https://tp-japan.com/",
   "logo": "https://tp-japan.com/photos/TPLogo11.png",
@@ -1896,21 +1855,19 @@ footer::before {
     "addressCountry": "MY"
   },
   "sameAs": [
-    "https://www.teleperformance.com",
+    "https://www.TP.com",
     "https://line.me/R/ti/p/@286nmdsd"
   ]
 }
 </script>
 </head>
 <body>
-<a href="#main" class="skip-link">メインコンテンツへスキップ</a>
-
 <header role="banner">
   <div class="header-inner">
     <div class="brand">
-      <img src="photos/TPLogo11.png" alt="Teleperformance Japan" width="40" height="40">
+      <img src="photos/TPLogo11.png" alt="TP Japan" width="40" height="40">
       <div class="brand-text">
-        <span class="brand-name">Teleperformance</span>
+        <span class="brand-name">TP</span>
         <span class="brand-tagline">日本採用 — マレーシア・タイ</span>
       </div>
     </div>
@@ -2004,20 +1961,11 @@ footer::before {
       <h2 class="section-title">優先メニュー</h2>
       <p class="section-subtitle">知りたい情報へすぐにアクセス</p>
       
-      <div class="sortbar">
-        <select aria-label="カードの並べ替え" data-sort-target="#priorityGrid">
-          <option value="recommend">おすすめ順</option>
-          <option value="new">新着順</option>
-          <option value="az">50音順</option>
-          <option value="za">50音逆順</option>
-        </select>
-      </div>
-      
       <div class="cards" id="priorityGrid">
         <a href="#about" class="card sortable-item" data-title="会社紹介">
-          <img src="photos/GBS.jpeg" alt="Teleperformanceとは" loading="lazy">
+          <img src="photos/GBS.jpeg" alt="TPとは" loading="lazy">
           <div class="card-content">
-            <h3>Teleperformanceとは</h3>
+            <h3>TPとは</h3>
             <p>世界最大級のBPO企業</p>
           </div>
         </a>
@@ -2146,7 +2094,8 @@ footer::before {
       </div>
     </div>
   </section>
-<!-- ===================== Video Section ===================== -->
+
+  <!-- ===================== Video Section ===================== -->
 <section class="video-section" id="videos">
   <div class="container">
     <h2 class="section-title">社員インタビュー（動画）</h2>
@@ -2227,14 +2176,6 @@ footer::before {
       <h2 class="section-title">勤務先都市のご紹介</h2>
       <p class="section-subtitle">マレーシア＆タイの魅力的な3都市</p>
       
-      <div class="sortbar">
-        <select aria-label="カードの並べ替え" data-sort-target="#citiesGrid">
-          <option value="recommend">おすすめ順</option>
-          <option value="new">新着順</option>
-          <option value="az">50音順</option>
-          <option value="za">50音逆順</option>
-        </select>
-      </div>
       
       <div class="city-cards" id="citiesGrid">
         <article class="city-card sortable-item" data-title="クアラルンプール">
@@ -2252,7 +2193,7 @@ footer::before {
           </div>
         </article>
         <article class="city-card sortable-item" data-title="ペナン">
-          <img src="photos/Penang%201.jpg" alt="ペナン" loading="lazy">
+          <img src="photos/Penang.jpg" alt="ペナン" loading="lazy">
           <div class="city-card-content">
             <h3>ペナン（Penang）</h3>
             <p class="city-country">マレーシア</p>
@@ -2266,7 +2207,7 @@ footer::before {
           </div>
         </article>
         <article class="city-card sortable-item" data-title="バンコク">
-          <img src="photos/Bangkok%201.jpg" alt="バンコク" loading="lazy">
+          <img src="photos/Bangkok%202.jpg" alt="バンコク" loading="lazy">
           <div class="city-card-content">
             <h3>バンコク（Bangkok）</h3>
             <p class="city-country">タイ</p>
@@ -2335,7 +2276,7 @@ footer::before {
     </div>
   </section>
 
- <!-- ===================== Interview Process (Refined) ===================== -->
+<!-- ===================== Interview Process (Refined) ===================== -->
 <section class="interview-process" id="interview">
   <div class="container">
     <h2 class="section-title">面接プロセス</h2>
@@ -2385,21 +2326,12 @@ footer::before {
   </div>
 </section>
 
-
   <!-- Office Environment (Enhanced) -->
   <section class="office-section" id="office">
     <div class="container">
       <h2 class="section-title">働く環境</h2>
       <p class="section-subtitle">快適でアクセス良好なワークプレイス</p>
       
-      <div class="sortbar">
-        <select aria-label="カードの並べ替え" data-sort-target="#officeGrid">
-          <option value="recommend">おすすめ順</option>
-          <option value="new">新着順</option>
-          <option value="az">50音順</option>
-          <option value="za">50音逆順</option>
-        </select>
-      </div>
       
       <div class="office-grid" id="officeGrid">
         <div class="office-card sortable-item" data-title="G Tower">
@@ -2447,7 +2379,7 @@ footer::before {
           </div>
         </div>
         <div class="office-card sortable-item" data-title="Singha Complex">
-          <img src="photos/Bangkok%202.jpg" alt="Bangkok Singha Complex" class="office-image" loading="lazy">
+          <img src="photos/Singha%20Complex1.jpg" alt="Bangkok Singha Complex" class="office-image" loading="lazy">
           <div class="office-info">
             <h3 class="office-name">Singha Complex（バンコク）</h3>
             <ul class="office-features">
@@ -2476,11 +2408,11 @@ footer::before {
           <div class="lifestyle-caption">カフェ巡り</div>
         </div>
         <div class="lifestyle-item">
-          <img src="photos/Penang%201.jpg" alt="ビーチライフ" loading="lazy">
+          <img src="photos/Penang.jpg" alt="ビーチライフ" loading="lazy">
           <div class="lifestyle-caption">ビーチでリラックス</div>
         </div>
         <div class="lifestyle-item">
-          <img src="photos/Bangkok%201.jpg" alt="ナイトマーケット" loading="lazy">
+          <img src="photos/Bangkok1.jpg" alt="ナイトマーケット" loading="lazy">
           <div class="lifestyle-caption">ナイトマーケット</div>
         </div>
         <div class="lifestyle-item">
@@ -2496,7 +2428,7 @@ footer::before {
           <div class="lifestyle-caption">ヨガでリフレッシュ</div>
         </div>
         <div class="lifestyle-item">
-          <img src="photos/Penang%201.jpg" alt="週末アイランドホッピング" loading="lazy">
+          <img src="photos/Penang.jpg" alt="週末アイランドホッピング" loading="lazy">
           <div class="lifestyle-caption">週末アイランドホッピング</div>
         </div>
         <div class="lifestyle-item">
@@ -2611,25 +2543,25 @@ footer::before {
           <div class="ta-member">
             <img src="photos/Maho.png" alt="Maho" class="ta-member-img">
             <h3 class="ta-member-name">Maho</h3>
-            <p class="ta-member-role">Sourcer</p>
+            <p class="ta-member-role">Talent Attraction｜Sourcing</p>
             <p class="ta-member-desc">初めての海外就職も、日本語でしっかりサポートします。</p>
           </div>
           <div class="ta-member">
             <img src="photos/Akito%20san.jpg" alt="Akito" class="ta-member-img">
             <h3 class="ta-member-name">Akito</h3>
-            <p class="ta-member-role">Recruiter</p>
+            <p class="ta-member-role">Talent Acquisition/ 採用担当</p>
             <p class="ta-member-desc">キャリア相談、お気軽にどうぞ。一緒に最適な道を見つけましょう。</p>
           </div>
           <div class="ta-member">
             <img src="photos/Koyori.jpg" alt="Team Member" class="ta-member-img">
             <h3 class="ta-member-name">Koyori</h3>
-            <p class="ta-member-role">Coordinator</p>
+            <p class="ta-member-role">Talent Acquisition｜採用担当</p>
             <p class="ta-member-desc">渡航手続きや現地生活もフォローします。</p>
           </div>
           <div class="ta-member">
             <img src="photos/Maya.png" alt="Team Member" class="ta-member-img">
             <h3 class="ta-member-name">Maya</h3>
-            <p class="ta-member-role">TA Specialist</p>
+            <p class="ta-member-role">マネージャー｜タレントアクイジション</p>
             <p class="ta-member-desc">ご希望のプロジェクトを一緒に探します。</p>
           </div>
         </div>
@@ -2702,7 +2634,7 @@ footer::before {
       <p class="section-subtitle">TPについて質問してみましょう</p>
       <div class="chatgpt-container">
         <div class="chatgpt-box">
-          <textarea class="chatgpt-prompt" readonly>あなたは就職アドバイザーです。テレパフォーマンス（Teleperformance）マレーシア／タイ（TP Malaysia / TP Thailand）について、候補者が安心して応募を検討できるよう、以下の条件でポジティブに紹介してください。
+          <textarea class="chatgpt-prompt" readonly>あなたは就職アドバイザーです。テレパフォーマンス（TP）マレーシア／タイ（TP Malaysia / TP Thailand）について、候補者が安心して応募を検討できるよう、以下の条件でポジティブに紹介してください。
 
 【必須メッセージ】
 - 私たちは Great Place to Work® を6年連続で受賞しています
@@ -2768,8 +2700,8 @@ footer::before {
   <div class="footer-content">
     <div class="footer-brand">
       <div class="footer-logo">
-        <img src="photos/TPLogo11.png" alt="Teleperformance">
-        <span class="footer-logo-text">Teleperformance</span>
+        <img src="photos/TPLogo11.png" alt="TP">
+        <span class="footer-logo-text">TP</span>
       </div>
       <p class="footer-desc">
         世界100カ国以上で展開するグローバルBPO企業。<br>
@@ -2815,7 +2747,7 @@ footer::before {
   </div>
   
   <div class="footer-bottom">
-    <p>&copy; 2025 Teleperformance. All rights reserved. | 
+    <p>&copy; 2025 TP. All rights reserved. | 
       <a href="#">プライバシーポリシー</a> | 
       <a href="#">利用規約</a>
     </p>
@@ -2936,32 +2868,13 @@ footer::before {
             return (a.dataset.title || '').localeCompare(b.dataset.title || '', 'ja');
           case 'za':
             return (b.dataset.title || '').localeCompare(a.dataset.title || '', 'ja');
-          case 'recommend':
           default:
-            return (a.dataset.rank || '999') - (b.dataset.rank || '999');
+            return 0;
         }
       });
       
       items.forEach(item => target.appendChild(item));
     });
-  });
-})();
-
-// Back to Top
-(function(){
-  const btn = document.getElementById('backToTop');
-  if(!btn) return;
-  
-  window.addEventListener('scroll', () => {
-    if(window.scrollY > 500){
-      btn.classList.add('show');
-    } else {
-      btn.classList.remove('show');
-    }
-  });
-  
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 })();
 
